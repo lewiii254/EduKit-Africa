@@ -8,7 +8,7 @@
   [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
   
-  [Live Demo](https://lovable.dev) · [Report Bug](https://github.com/yourusername/edukit-africa/issues) · [Request Feature](https://github.com/yourusername/edukit-africa/issues)
+  [Report Bug](https://github.com/lewiii254/EduKit-Africa/issues) · [Request Feature](https://github.com/lewiii254/EduKit-Africa/issues)
 </div>
 
 ---
@@ -81,7 +81,7 @@ Empower African tech talent through open-source education by:
 - **TanStack Query** - Server state management
 - **Sonner** - Toast notifications
 
-### Backend (Lovable Cloud/Supabase)
+### Backend (Supabase)
 - **PostgreSQL** - Relational database
 - **Supabase Auth** - Authentication system
 - **Row Level Security (RLS)** - Database security policies
@@ -122,7 +122,7 @@ Ensure you have the following installed:
 
 3. **Set up environment variables**
    
-   The project uses Lovable Cloud which auto-configures Supabase. The `.env` file is automatically generated with:
+   Create a `.env` file in the root directory with your Supabase credentials:
    ```env
    VITE_SUPABASE_URL=your_supabase_url
    VITE_SUPABASE_PUBLISHABLE_KEY=your_anon_key
@@ -429,7 +429,7 @@ SOFTWARE.
 
 ## 📞 Contact
 
-- **GitHub**: [EduKit Africa Repository](https://github.com/yourusername/edukit-africa)
+- **GitHub**: [EduKit Africa Repository](https://github.com/lewiii254/EduKit-Africa)
 - **Twitter**: [@EdukitAfrica](https://twitter.com/edukitafrica)
 - **Email**: contact@edukitafrica.org
 
@@ -437,7 +437,6 @@ SOFTWARE.
 
 ## 🙏 Acknowledgments
 
-- Built with [Lovable](https://lovable.dev) - The AI-powered full-stack platform
 - Powered by [Supabase](https://supabase.com) - Open source Firebase alternative
 - UI components from [shadcn/ui](https://ui.shadcn.com)
 - Icons by [Lucide](https://lucide.dev)
