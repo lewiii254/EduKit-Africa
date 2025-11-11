@@ -15,6 +15,7 @@ export function Navigation() {
     { to: '/tracks', label: 'Tracks' },
     { to: '/contribute', label: 'Contribute' },
     { to: '/about', label: 'About' },
+    ...(user ? [{ to: '/dashboard', label: 'Dashboard' }] : []),
   ];
 
   return (
