@@ -53,9 +53,16 @@ Empower African tech talent through open-source education by:
 - **📝 Resource Contribution**: Authenticated users can submit learning resources
 - **⭐ Ratings & Reviews**: Rate resources (1-5 stars) and leave comments
 - **🔍 Advanced Search & Filtering**: Search by title, tags; filter by category and difficulty
+- **🔄 Smart Sorting**: Sort resources by newest, oldest, popularity, or rating
 - **📊 Category Organization**: 8 main tech categories with dedicated track pages
 - **👤 User Profiles**: Automatic profile creation with username and avatar support
 - **📱 Responsive Design**: Mobile-first approach with beautiful UI
+- **📖 Bookmarks System**: Save favorite resources for later reference
+- **📊 User Dashboard**: Track your contributions, bookmarks, and statistics
+- **📄 Pagination**: Browse resources efficiently with 12 items per page
+- **💾 Export Bookmarks**: Export your saved resources in JSON, CSV, or Markdown format
+- **♿ Accessibility**: Skip navigation links, ARIA labels, and enhanced keyboard navigation
+- **👁️ View Tracking**: See how many times resources have been viewed
 
 ### Categories Covered
 - Computer Science
@@ -167,6 +174,7 @@ Stores learning resources submitted by users
 - difficulty: TEXT (Beginner/Intermediate/Advanced)
 - tags: TEXT[] (Array of tags)
 - contributor_id: UUID (Foreign Key -> profiles.id)
+- view_count: INTEGER (Default 0)
 - created_at: TIMESTAMPTZ
 ```
 
@@ -180,6 +188,25 @@ Stores user ratings and reviews for resources
 - comment: TEXT (Optional)
 - created_at: TIMESTAMPTZ
 - UNIQUE constraint on (resource_id, user_id)
+```
+
+#### **bookmarks**
+Stores user bookmarks for resources
+```sql
+- id: UUID (Primary Key)
+- user_id: UUID (Foreign Key -> profiles.id)
+- resource_id: UUID (Foreign Key -> resources.id)
+- created_at: TIMESTAMPTZ
+- UNIQUE constraint on (user_id, resource_id)
+```
+
+#### **resource_views**
+Tracks resource views for analytics
+```sql
+- id: UUID (Primary Key)
+- resource_id: UUID (Foreign Key -> resources.id)
+- user_id: UUID (Foreign Key -> profiles.id, nullable)
+- viewed_at: TIMESTAMPTZ
 ```
 
 ### Row Level Security (RLS) Policies
@@ -196,9 +223,21 @@ All tables have RLS enabled with the following policies:
 
 ### For Learners
 1. Browse resources on the [Tracks page](/tracks)
-2. Use search and filters to find relevant content
-3. Sign up to rate and review resources
-4. Bookmark your favorite resources (coming soon)
+2. Use search, filters, and sorting to find relevant content
+3. Sign up to access advanced features:
+   - Rate and review resources
+   - Bookmark favorite resources
+   - View your personalized dashboard
+4. Export your bookmarks in JSON, CSV, or Markdown format
+
+### Using the Dashboard
+1. Navigate to [Dashboard](/dashboard) after signing in
+2. View your statistics:
+   - Total contributions made
+   - Total bookmarks saved
+   - Ratings given and average rating
+3. Manage your contributions and bookmarks
+4. Export bookmarks for offline access
 
 ### For Contributors
 1. [Sign up](/auth) for an account
