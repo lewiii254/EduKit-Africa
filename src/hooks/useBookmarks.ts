@@ -15,6 +15,7 @@ export function useBookmarks() {
       setBookmarks(new Set());
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const fetchBookmarks = async () => {
@@ -73,9 +74,10 @@ export function useBookmarks() {
         setBookmarks(prev => new Set([...prev, resourceId]));
         toast.success('Resource bookmarked');
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error('Error toggling bookmark:', error);
-      toast.error(error.message || 'Failed to update bookmark');
+      const errorMessage = error instanceof Error ? error.message : 'Failed to update bookmark';
+      toast.error(errorMessage);
     }
   };
 

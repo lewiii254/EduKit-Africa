@@ -104,4 +104,20 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Accessibility improvements */
+  .skip-to-content {
+    @apply absolute left-0 top-0 bg-primary text-primary-foreground px-4 py-2 -translate-y-full focus:translate-y-0 transition-transform z-50;
+  }
+
+  /* Enhanced focus styles for keyboard navigation */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  /* Improve button focus styles */
+  button:focus-visible,
+  a:focus-visible {
+    @apply ring-2 ring-primary ring-offset-2;
+  }
 }

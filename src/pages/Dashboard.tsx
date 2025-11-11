@@ -4,18 +4,39 @@ import { Navigation } from '@/components/Navigation';
 import { ResourceCard } from '@/components/ResourceCard';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/integrations/supabase/client';
 import { Skeleton } from '@/components/ui/skeleton';
-import { BookMarked, FileText, Star, TrendingUp } from 'lucide-react';
+import { BookMarked, FileText, Star, TrendingUp, Download } from 'lucide-react';
 import { toast } from 'sonner';
+import { exportToJSON, exportToCSV, exportToMarkdown } from '@/lib/exportBookmarks';
+
+interface Resource {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  category: string;
+  difficulty: string;
+  tags: string[];
+  contributor_id: string;
+  created_at: string;
+  view_count?: number;
+}
 
 export default function Dashboard() {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [myResources, setMyResources] = useState<any[]>([]);
-  const [bookmarkedResources, setBookmarkedResources] = useState<any[]>([]);
+  const [myResources, setMyResources] = useState<Resource[]>([]);
+  const [bookmarkedResources, setBookmarkedResources] = useState<Resource[]>([]);
   const [stats, setStats] = useState({
     totalContributions: 0,
     totalBookmarks: 0,
@@ -30,6 +51,7 @@ export default function Dashboard() {
       return;
     }
     fetchDashboardData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, navigate]);
 
   const fetchDashboardData = async () => {
@@ -100,9 +122,12 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-background">
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
       <Navigation />
       
-      <div className="container mx-auto px-4 py-8">
+      <main id="main-content" className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-2">My Dashboard</h1>
         <p className="text-muted-foreground mb-8">
           Track your contributions and manage your bookmarks
@@ -210,15 +235,47 @@ export default function Dashboard() {
                 </CardHeader>
               </Card>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {bookmarkedResources.map((resource) => (
-                  <ResourceCard key={resource.id} resource={resource} />
-                ))}
-              </div>
+              <>
+                <div className="flex justify-end mb-4">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outline" size="sm">
+                        <Download className="h-4 w-4 mr-2" />
+                        Export Bookmarks
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem onClick={() => {
+                        exportToJSON(bookmarkedResources);
+                        toast.success('Bookmarks exported as JSON');
+                      }}>
+                        Export as JSON
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => {
+                        exportToCSV(bookmarkedResources);
+                        toast.success('Bookmarks exported as CSV');
+                      }}>
+                        Export as CSV
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => {
+                        exportToMarkdown(bookmarkedResources);
+                        toast.success('Bookmarks exported as Markdown');
+                      }}>
+                        Export as Markdown
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {bookmarkedResources.map((resource) => (
+                    <ResourceCard key={resource.id} resource={resource} />
+                  ))}
+                </div>
+              </>
             )}
           </TabsContent>
         </Tabs>
-      </div>
+      </main>
     </div>
   );
 }

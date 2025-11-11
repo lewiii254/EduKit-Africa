@@ -19,6 +19,7 @@ export default function Tracks() {
     searchParams.get('category') || 'All'
   );
   const [selectedDifficulty, setSelectedDifficulty] = useState('All');
+  const [sortBy, setSortBy] = useState('newest');
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -56,13 +57,30 @@ export default function Tracks() {
   // Reset to page 1 when filters change
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedCategory, selectedDifficulty]);
+  }, [searchQuery, selectedCategory, selectedDifficulty, sortBy]);
+
+  // Sort resources
+  const sortedResources = [...filteredResources].sort((a, b) => {
+    switch (sortBy) {
+      case 'newest':
+        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+      case 'oldest':
+        return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+      case 'popular':
+        return (b.view_count || 0) - (a.view_count || 0);
+      case 'rating':
+        // This would require fetching ratings - for now just return by date
+        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+      default:
+        return 0;
+    }
+  });
 
   // Pagination calculations
-  const totalPages = Math.ceil(filteredResources.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(sortedResources.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
-  const paginatedResources = filteredResources.slice(startIndex, endIndex);
+  const paginatedResources = sortedResources.slice(startIndex, endIndex);
 
   const goToPage = (page: number) => {
     setCurrentPage(page);
@@ -71,9 +89,12 @@ export default function Tracks() {
 
   return (
     <div className="min-h-screen bg-background">
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
       <Navigation />
       
-      <main className="container mx-auto px-4 py-8">
+      <main id="main-content" className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-4">Learning Resources</h1>
           <p className="text-muted-foreground text-lg">
@@ -89,6 +110,8 @@ export default function Tracks() {
             onCategoryChange={setSelectedCategory}
             selectedDifficulty={selectedDifficulty}
             onDifficultyChange={setSelectedDifficulty}
+            sortBy={sortBy}
+            onSortChange={setSortBy}
           />
         </div>
 
@@ -102,7 +125,7 @@ export default function Tracks() {
               </div>
             ))}
           </div>
-        ) : filteredResources.length === 0 ? (
+        ) : sortedResources.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
               No resources found matching your criteria.
@@ -111,7 +134,7 @@ export default function Tracks() {
         ) : (
           <>
             <div className="mb-4 text-muted-foreground">
-              Showing {startIndex + 1}-{Math.min(endIndex, filteredResources.length)} of {filteredResources.length} resource{filteredResources.length !== 1 ? 's' : ''}
+              Showing {startIndex + 1}-{Math.min(endIndex, sortedResources.length)} of {sortedResources.length} resource{sortedResources.length !== 1 ? 's' : ''}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {paginatedResources.map((resource) => (
