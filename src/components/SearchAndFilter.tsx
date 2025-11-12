@@ -9,6 +9,8 @@ interface SearchAndFilterProps {
   onCategoryChange: (value: string) => void;
   selectedDifficulty: string;
   onDifficultyChange: (value: string) => void;
+  sortBy?: string;
+  onSortChange?: (value: string) => void;
 }
 
 export const CATEGORIES = [
@@ -25,6 +27,13 @@ export const CATEGORIES = [
 
 export const DIFFICULTIES = ['All', 'Beginner', 'Intermediate', 'Advanced'];
 
+export const SORT_OPTIONS = [
+  { value: 'newest', label: 'Newest First' },
+  { value: 'oldest', label: 'Oldest First' },
+  { value: 'rating', label: 'Highest Rated' },
+  { value: 'popular', label: 'Most Popular' },
+];
+
 export function SearchAndFilter({
   searchQuery,
   onSearchChange,
@@ -32,6 +41,8 @@ export function SearchAndFilter({
   onCategoryChange,
   selectedDifficulty,
   onDifficultyChange,
+  sortBy = 'newest',
+  onSortChange,
 }: SearchAndFilterProps) {
   return (
     <div className="space-y-4">
@@ -43,12 +54,13 @@ export function SearchAndFilter({
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           className="pl-10"
+          aria-label="Search resources"
         />
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
         <Select value={selectedCategory} onValueChange={onCategoryChange}>
-          <SelectTrigger className="w-full sm:w-[200px]">
+          <SelectTrigger className="w-full sm:w-[200px]" aria-label="Filter by category">
             <SelectValue placeholder="Category" />
           </SelectTrigger>
           <SelectContent>
@@ -61,7 +73,7 @@ export function SearchAndFilter({
         </Select>
 
         <Select value={selectedDifficulty} onValueChange={onDifficultyChange}>
-          <SelectTrigger className="w-full sm:w-[200px]">
+          <SelectTrigger className="w-full sm:w-[200px]" aria-label="Filter by difficulty">
             <SelectValue placeholder="Difficulty" />
           </SelectTrigger>
           <SelectContent>
@@ -72,6 +84,21 @@ export function SearchAndFilter({
             ))}
           </SelectContent>
         </Select>
+
+        {onSortChange && (
+          <Select value={sortBy} onValueChange={onSortChange}>
+            <SelectTrigger className="w-full sm:w-[200px]" aria-label="Sort resources">
+              <SelectValue placeholder="Sort by" />
+            </SelectTrigger>
+            <SelectContent>
+              {SORT_OPTIONS.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        )}
       </div>
     </div>
   );

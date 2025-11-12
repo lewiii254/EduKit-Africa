@@ -9,6 +9,7 @@ import Auth from "./pages/Auth";
 import Tracks from "./pages/Tracks";
 import Contribute from "./pages/Contribute";
 import About from "./pages/About";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import SeedDatabase from "./pages/SeedDatabase";
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/tracks" element={<Tracks />} />
             <Route path="/contribute" element={<Contribute />} />
             <Route path="/about" element={<About />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/seed" element={<SeedDatabase />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

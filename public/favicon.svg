@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with African sunset colors -->
+  <circle cx="32" cy="32" r="32" fill="#2D5F3F"/>
+  
+  <!-- Book shape representing education -->
+  <path d="M16 20 L16 48 L32 44 L48 48 L48 20 L32 24 Z" fill="#FFB84D" opacity="0.9"/>
+  <path d="M32 24 L32 44" stroke="#2D5F3F" stroke-width="2"/>
+  
+  <!-- Continent shape (simplified Africa) -->
+  <path d="M28 14 L30 16 L32 15 L34 17 L36 16 L37 18 L36 20 L34 21 L32 20 L30 21 L28 20 L27 18 Z" fill="#E8B74A"/>
+  
+  <!-- Star for excellence -->
+  <path d="M32 8 L33.5 11 L37 11.5 L34.5 14 L35 17.5 L32 16 L29 17.5 L29.5 14 L27 11.5 L30.5 11 Z" fill="#FFF" opacity="0.95"/>
+</svg>

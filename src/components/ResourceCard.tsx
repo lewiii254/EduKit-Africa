@@ -1,11 +1,12 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { ExternalLink, Star, User } from 'lucide-react';
+import { ExternalLink, Star, User, Bookmark, Eye } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { RatingDialog } from './RatingDialog';
+import { useBookmarks } from '@/hooks/useBookmarks';
 
 interface ResourceCardProps {
   resource: {
@@ -18,15 +19,18 @@ interface ResourceCardProps {
     tags: string[];
     contributor_id: string;
     created_at: string;
+    view_count?: number;
   };
 }
 
 export function ResourceCard({ resource }: ResourceCardProps) {
   const { user } = useAuth();
+  const { toggleBookmark, isBookmarked } = useBookmarks();
   const [averageRating, setAverageRating] = useState<number>(0);
   const [ratingsCount, setRatingsCount] = useState<number>(0);
   const [contributorName, setContributorName] = useState<string>('');
   const [showRatingDialog, setShowRatingDialog] = useState(false);
+  const bookmarked = isBookmarked(resource.id);
 
   useEffect(() => {
     fetchRatings();
@@ -108,12 +112,20 @@ export function ResourceCard({ resource }: ResourceCardProps) {
               </div>
             )}
 
-            {contributorName && (
-              <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                <User className="h-3 w-3" />
-                <span>by {contributorName}</span>
-              </div>
-            )}
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              {contributorName && (
+                <div className="flex items-center gap-1">
+                  <User className="h-3 w-3" />
+                  <span>by {contributorName}</span>
+                </div>
+              )}
+              {resource.view_count !== undefined && resource.view_count > 0 && (
+                <div className="flex items-center gap-1">
+                  <Eye className="h-3 w-3" />
+                  <span>{resource.view_count}</span>
+                </div>
+              )}
+            </div>
           </div>
         </CardContent>
 
@@ -125,14 +137,26 @@ export function ResourceCard({ resource }: ResourceCardProps) {
             </a>
           </Button>
           {user && (
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => setShowRatingDialog(true)}
-              title="Rate this resource"
-            >
-              <Star className="h-4 w-4" />
-            </Button>
+            <>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setShowRatingDialog(true)}
+                title="Rate this resource"
+                aria-label="Rate this resource"
+              >
+                <Star className="h-4 w-4" />
+              </Button>
+              <Button
+                variant={bookmarked ? "default" : "outline"}
+                size="icon"
+                onClick={() => toggleBookmark(resource.id)}
+                title={bookmarked ? "Remove bookmark" : "Bookmark resource"}
+                aria-label={bookmarked ? "Remove bookmark" : "Bookmark resource"}
+              >
+                <Bookmark className={`h-4 w-4 ${bookmarked ? 'fill-current' : ''}`} />
+              </Button>
+            </>
           )}
         </CardFooter>
       </Card>
