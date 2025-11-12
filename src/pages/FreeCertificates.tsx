@@ -6,11 +6,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Search, ExternalLink, Award, Clock } from 'lucide-react';
-import { freeCertificates, categories } from '@/data/freeCertificates';
+import { freeCertificates, categories, regions } from '@/data/freeCertificates';
 
 export default function FreeCertificates() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedRegion, setSelectedRegion] = useState('All');
   
   // Last updated date
   const lastUpdated = new Date('2025-11-12').toLocaleDateString('en-US', { 
@@ -29,7 +30,10 @@ export default function FreeCertificates() {
     const matchesCategory =
       selectedCategory === 'All' || cert.category === selectedCategory;
 
-    return matchesSearch && matchesCategory;
+    const matchesRegion =
+      selectedRegion === 'All' || cert.region === selectedRegion;
+
+    return matchesSearch && matchesCategory && matchesRegion;
   });
 
   return (
@@ -69,7 +73,7 @@ export default function FreeCertificates() {
 
         {/* Search and Filter Section */}
         <div className="mb-8 space-y-4" id="certificates">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Search Bar */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
@@ -96,12 +100,27 @@ export default function FreeCertificates() {
                 ))}
               </SelectContent>
             </Select>
+
+            {/* Region Filter */}
+            <Select value={selectedRegion} onValueChange={setSelectedRegion}>
+              <SelectTrigger aria-label="Filter by region">
+                <SelectValue placeholder="Select a region" />
+              </SelectTrigger>
+              <SelectContent>
+                {regions.map((region) => (
+                  <SelectItem key={region} value={region}>
+                    {region}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           {/* Results Count */}
           <div className="text-muted-foreground">
             Showing {filteredCertificates.length} certificate{filteredCertificates.length !== 1 ? 's' : ''}
             {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+            {selectedRegion !== 'All' && ` from ${selectedRegion}`}
           </div>
         </div>
 
@@ -117,6 +136,7 @@ export default function FreeCertificates() {
               onClick={() => {
                 setSearchQuery('');
                 setSelectedCategory('All');
+                setSelectedRegion('All');
               }}
               className="mt-4"
             >
@@ -132,9 +152,19 @@ export default function FreeCertificates() {
               >
                 <CardHeader className="flex-grow">
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <Badge variant="secondary" className="shrink-0">
-                      {cert.category}
-                    </Badge>
+                    <div className="flex flex-wrap gap-1">
+                      <Badge variant="secondary" className="shrink-0">
+                        {cert.category}
+                      </Badge>
+                      <Badge variant="outline" className="shrink-0 text-xs">
+                        {cert.level}
+                      </Badge>
+                      {cert.region !== 'Global' && (
+                        <Badge variant="default" className="shrink-0 text-xs bg-green-600">
+                          {cert.region}
+                        </Badge>
+                      )}
+                    </div>
                     <Award className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-lg leading-tight">
