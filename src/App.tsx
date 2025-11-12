@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import SeedDatabase from "./pages/SeedDatabase";
+import YouTubeVideos from "./pages/YouTubeVideos";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/tracks" element={<Tracks />} />
+            <Route path="/youtube" element={<YouTubeVideos />} />
             <Route path="/contribute" element={<Contribute />} />
             <Route path="/about" element={<About />} />
             <Route path="/dashboard" element={<Dashboard />} />

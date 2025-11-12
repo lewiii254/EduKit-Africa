@@ -13,6 +13,7 @@ export function Navigation() {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/tracks', label: 'Tracks' },
+    { to: '/youtube', label: 'YouTube' },
     { to: '/contribute', label: 'Contribute' },
     { to: '/about', label: 'About' },
     ...(user ? [{ to: '/dashboard', label: 'Dashboard' }] : []),

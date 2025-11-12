@@ -547,5 +547,374 @@
     "difficulty": "Intermediate",
     "tags": ["secure-coding", "OWASP", "vulnerabilities", "development"],
     "contributor_id": null
+  },
+  {
+    "title": "The Odin Project",
+    "description": "Free open-source coding curriculum covering full-stack JavaScript and Ruby on Rails with hands-on projects.",
+    "link": "https://www.theodinproject.com/",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["JavaScript", "Ruby", "full-stack", "projects"],
+    "contributor_id": null
+  },
+  {
+    "title": "Web.dev by Google",
+    "description": "Modern web development best practices, performance optimization, and progressive web apps from Google's web team.",
+    "link": "https://web.dev/",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["performance", "PWA", "best-practices", "Google"],
+    "contributor_id": null
+  },
+  {
+    "title": "JavaScript.info - The Modern JavaScript Tutorial",
+    "description": "Comprehensive guide to modern JavaScript from basics to advanced topics with interactive examples.",
+    "link": "https://javascript.info/",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["JavaScript", "ES6", "tutorial", "interactive"],
+    "contributor_id": null
+  },
+  {
+    "title": "CSS-Tricks",
+    "description": "Daily articles, tutorials, and resources about CSS, HTML, JavaScript, and web design best practices.",
+    "link": "https://css-tricks.com/",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["CSS", "HTML", "design", "tutorials"],
+    "contributor_id": null
+  },
+  {
+    "title": "Frontend Masters",
+    "description": "Expert-led courses on advanced JavaScript, React, Vue, TypeScript, Node.js, and modern frontend development.",
+    "link": "https://frontendmasters.com/",
+    "category": "Web Development",
+    "difficulty": "Advanced",
+    "tags": ["JavaScript", "React", "Vue", "TypeScript"],
+    "contributor_id": null
+  },
+  {
+    "title": "MDN Web Docs",
+    "description": "Mozilla's comprehensive documentation for web technologies including HTML, CSS, JavaScript, and Web APIs.",
+    "link": "https://developer.mozilla.org/",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["documentation", "reference", "HTML", "CSS", "JavaScript"],
+    "contributor_id": null
+  },
+  {
+    "title": "Deep Learning Specialization - Andrew Ng",
+    "description": "Master fundamentals of deep learning including neural networks, CNNs, RNNs, and transformers from AI pioneer Andrew Ng.",
+    "link": "https://www.coursera.org/specializations/deep-learning",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["deep-learning", "neural-networks", "TensorFlow", "Andrew-Ng"],
+    "contributor_id": null
+  },
+  {
+    "title": "fast.ai - Practical Deep Learning",
+    "description": "Top-down approach to learning deep learning with PyTorch, focusing on getting practical results quickly.",
+    "link": "https://www.fast.ai/",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["deep-learning", "PyTorch", "practical", "computer-vision"],
+    "contributor_id": null
+  },
+  {
+    "title": "Kaggle Learn",
+    "description": "Free micro-courses on Python, machine learning, data visualization, SQL, and deep learning with hands-on practice.",
+    "link": "https://www.kaggle.com/learn",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["Python", "ML", "data-science", "hands-on"],
+    "contributor_id": null
+  },
+  {
+    "title": "Papers with Code",
+    "description": "Discover the latest machine learning research papers with code implementations and benchmarks.",
+    "link": "https://paperswithcode.com/",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Advanced",
+    "tags": ["research", "papers", "implementations", "benchmarks"],
+    "contributor_id": null
+  },
+  {
+    "title": "StatQuest with Josh Starmer",
+    "description": "Clear and fun explanations of statistics and machine learning concepts through engaging video tutorials.",
+    "link": "https://statquest.org/",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["statistics", "ML", "concepts", "video-tutorials"],
+    "contributor_id": null
+  },
+  {
+    "title": "Google Cloud Skills Boost",
+    "description": "Hands-on labs and courses for Google Cloud Platform services, architecture, and certifications.",
+    "link": "https://www.cloudskillsboost.google/",
+    "category": "Cloud Computing",
+    "difficulty": "Beginner",
+    "tags": ["GCP", "hands-on", "labs", "certification"],
+    "contributor_id": null
+  },
+  {
+    "title": "AWS re:Invent Videos",
+    "description": "Technical deep dives and best practices from AWS's annual conference covering all AWS services.",
+    "link": "https://www.youtube.com/user/AmazonWebServices",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["AWS", "videos", "conference", "best-practices"],
+    "contributor_id": null
+  },
+  {
+    "title": "Azure Learn",
+    "description": "Free learning paths and modules for Microsoft Azure with hands-on labs and sandbox environments.",
+    "link": "https://docs.microsoft.com/en-us/learn/azure/",
+    "category": "Cloud Computing",
+    "difficulty": "Beginner",
+    "tags": ["Azure", "Microsoft", "hands-on", "certification"],
+    "contributor_id": null
+  },
+  {
+    "title": "Cloud Native Computing Foundation",
+    "description": "Learn about cloud-native technologies including Kubernetes, service mesh, CI/CD, and observability.",
+    "link": "https://www.cncf.io/",
+    "category": "Cloud Computing",
+    "difficulty": "Advanced",
+    "tags": ["Kubernetes", "cloud-native", "CNCF", "containers"],
+    "contributor_id": null
+  },
+  {
+    "title": "Terraform Documentation",
+    "description": "Infrastructure as Code with Terraform - comprehensive guides for cloud infrastructure automation.",
+    "link": "https://www.terraform.io/docs",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["IaC", "Terraform", "automation", "infrastructure"],
+    "contributor_id": null
+  },
+  {
+    "title": "CryptoZombies",
+    "description": "Learn Solidity by building your own crypto-collectibles game on Ethereum blockchain through interactive lessons.",
+    "link": "https://cryptozombies.io/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Beginner",
+    "tags": ["Solidity", "Ethereum", "smart-contracts", "interactive"],
+    "contributor_id": null
+  },
+  {
+    "title": "Buildspace",
+    "description": "Build Web3 projects in weekend sprints - NFTs, DAOs, DeFi apps with hands-on tutorials and community support.",
+    "link": "https://buildspace.so/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Beginner",
+    "tags": ["Web3", "NFT", "DAO", "projects"],
+    "contributor_id": null
+  },
+  {
+    "title": "Alchemy University",
+    "description": "Free Web3 development bootcamp covering blockchain fundamentals, smart contracts, and dApp development.",
+    "link": "https://university.alchemy.com/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Beginner",
+    "tags": ["Web3", "blockchain", "dApp", "bootcamp"],
+    "contributor_id": null
+  },
+  {
+    "title": "Ethereum.org Developer Resources",
+    "description": "Official Ethereum development resources including documentation, tutorials, and tools for building on Ethereum.",
+    "link": "https://ethereum.org/en/developers/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Intermediate",
+    "tags": ["Ethereum", "documentation", "development", "tools"],
+    "contributor_id": null
+  },
+  {
+    "title": "Web3.University",
+    "description": "Free blockchain development courses covering Solidity, DeFi, NFTs, and full-stack Web3 development.",
+    "link": "https://www.web3.university/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Beginner",
+    "tags": ["Web3", "Solidity", "DeFi", "NFTs"],
+    "contributor_id": null
+  },
+  {
+    "title": "Ray Wenderlich - iOS Tutorials",
+    "description": "High-quality iOS development tutorials, courses, and books for Swift and SwiftUI programming.",
+    "link": "https://www.kodeco.com/ios",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["iOS", "Swift", "SwiftUI", "tutorials"],
+    "contributor_id": null
+  },
+  {
+    "title": "Android Developers",
+    "description": "Official Android development resources from Google including guides, API reference, and best practices.",
+    "link": "https://developer.android.com/",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Android", "Kotlin", "Java", "official"],
+    "contributor_id": null
+  },
+  {
+    "title": "React Native Documentation",
+    "description": "Build native mobile apps using React - comprehensive documentation with tutorials and API reference.",
+    "link": "https://reactnative.dev/",
+    "category": "Mobile Development",
+    "difficulty": "Intermediate",
+    "tags": ["React-Native", "JavaScript", "cross-platform", "mobile"],
+    "contributor_id": null
+  },
+  {
+    "title": "Flutter Codelabs",
+    "description": "Hands-on coding tutorials for Flutter and Dart covering UI, animations, state management, and more.",
+    "link": "https://docs.flutter.dev/codelabs",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Flutter", "Dart", "cross-platform", "Google"],
+    "contributor_id": null
+  },
+  {
+    "title": "Mobile Development Best Practices",
+    "description": "Learn architecture patterns, testing strategies, and performance optimization for mobile apps.",
+    "link": "https://github.com/futurice/android-best-practices",
+    "category": "Mobile Development",
+    "difficulty": "Intermediate",
+    "tags": ["best-practices", "architecture", "testing", "performance"],
+    "contributor_id": null
+  },
+  {
+    "title": "The DevOps Roadmap",
+    "description": "Comprehensive roadmap and learning path for becoming a DevOps engineer with curated resources.",
+    "link": "https://roadmap.sh/devops",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "tags": ["roadmap", "learning-path", "career", "guide"],
+    "contributor_id": null
+  },
+  {
+    "title": "Kubernetes Documentation",
+    "description": "Official Kubernetes docs covering concepts, tasks, tutorials, and reference for container orchestration.",
+    "link": "https://kubernetes.io/docs/",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Kubernetes", "containers", "orchestration", "documentation"],
+    "contributor_id": null
+  },
+  {
+    "title": "DevOps Bootcamp by Nana",
+    "description": "Complete DevOps roadmap with practical projects covering Docker, Kubernetes, CI/CD, and cloud platforms.",
+    "link": "https://www.techworld-with-nana.com/devops-bootcamp",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "tags": ["bootcamp", "Docker", "Kubernetes", "CI-CD"],
+    "contributor_id": null
+  },
+  {
+    "title": "GitLab CI/CD Documentation",
+    "description": "Learn continuous integration and deployment with GitLab's comprehensive CI/CD pipeline documentation.",
+    "link": "https://docs.gitlab.com/ee/ci/",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["CI-CD", "GitLab", "automation", "pipelines"],
+    "contributor_id": null
+  },
+  {
+    "title": "Ansible Documentation",
+    "description": "Automation platform documentation covering playbooks, modules, and infrastructure automation patterns.",
+    "link": "https://docs.ansible.com/",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Ansible", "automation", "configuration", "infrastructure"],
+    "contributor_id": null
+  },
+  {
+    "title": "Design Patterns in Python",
+    "description": "Learn software design patterns with Python examples - creational, structural, and behavioral patterns.",
+    "link": "https://refactoring.guru/design-patterns/python",
+    "category": "Computer Science",
+    "difficulty": "Intermediate",
+    "tags": ["design-patterns", "Python", "software-engineering", "architecture"],
+    "contributor_id": null
+  },
+  {
+    "title": "System Design Primer",
+    "description": "Learn how to design large-scale systems with this comprehensive GitHub repository of resources and examples.",
+    "link": "https://github.com/donnemartin/system-design-primer",
+    "category": "Computer Science",
+    "difficulty": "Advanced",
+    "tags": ["system-design", "architecture", "scalability", "interviews"],
+    "contributor_id": null
+  },
+  {
+    "title": "Competitive Programming - Codeforces",
+    "description": "Platform for competitive programming with contests, problems, and educational resources for algorithm practice.",
+    "link": "https://codeforces.com/",
+    "category": "Computer Science",
+    "difficulty": "Intermediate",
+    "tags": ["competitive-programming", "algorithms", "contests", "practice"],
+    "contributor_id": null
+  },
+  {
+    "title": "NAND to Tetris",
+    "description": "Build a modern computer from first principles - from logic gates to operating system and high-level applications.",
+    "link": "https://www.nand2tetris.org/",
+    "category": "Computer Science",
+    "difficulty": "Advanced",
+    "tags": ["computer-architecture", "hardware", "systems", "hands-on"],
+    "contributor_id": null
+  },
+  {
+    "title": "Compiler Construction - Stanford",
+    "description": "Learn how compilers work including lexical analysis, parsing, semantic analysis, and code generation.",
+    "link": "https://web.stanford.edu/class/cs143/",
+    "category": "Computer Science",
+    "difficulty": "Advanced",
+    "tags": ["compilers", "parsing", "code-generation", "theory"],
+    "contributor_id": null
+  },
+  {
+    "title": "OWASP Top 10",
+    "description": "Standard awareness document for web application security representing the most critical security risks.",
+    "link": "https://owasp.org/www-project-top-ten/",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["OWASP", "web-security", "vulnerabilities", "awareness"],
+    "contributor_id": null
+  },
+  {
+    "title": "PortSwigger Web Security Academy",
+    "description": "Free online training for web application security testing with interactive labs and learning paths.",
+    "link": "https://portswigger.net/web-security",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["web-security", "pentesting", "labs", "Burp-Suite"],
+    "contributor_id": null
+  },
+  {
+    "title": "Cybrary",
+    "description": "Free cybersecurity training platform with courses on ethical hacking, forensics, incident response, and more.",
+    "link": "https://www.cybrary.it/",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["training", "certifications", "ethical-hacking", "forensics"],
+    "contributor_id": null
+  },
+  {
+    "title": "Security+ Training by Professor Messer",
+    "description": "Free CompTIA Security+ certification training videos covering all exam objectives and security fundamentals.",
+    "link": "https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/sy0-601-comptia-security-plus-course/",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["Security+", "CompTIA", "certification", "training"],
+    "contributor_id": null
+  },
+  {
+    "title": "Blue Team Labs Online",
+    "description": "Defensive security challenges and labs for security analysts, incident responders, and SOC analysts.",
+    "link": "https://blueteamlabs.online/",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["blue-team", "defense", "SOC", "incident-response"],
+    "contributor_id": null
   }
 ]
