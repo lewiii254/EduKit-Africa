@@ -31,7 +31,8 @@ export default function Tracks() {
     const { data, error } = await supabase
       .from('resources')
       .select('*')
-      .order('created_at', { ascending: false });
+      .order('created_at', { ascending: false })
+      .limit(1000); // Explicitly set a high limit to fetch all resources
 
     if (!error && data) {
       setResources(data);
