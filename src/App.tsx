@@ -10,6 +10,7 @@ import Tracks from "./pages/Tracks";
 import Contribute from "./pages/Contribute";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import SeedDatabase from "./pages/SeedDatabase";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/tracks" element={<Tracks />} />
             <Route path="/contribute" element={<Contribute />} />
             <Route path="/about" element={<About />} />
+            <Route path="/seed" element={<SeedDatabase />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,0 +1,551 @@
+[
+  {
+    "title": "CS50: Introduction to Computer Science",
+    "description": "Harvard's legendary introduction to computer science and programming. Learn algorithmic thinking, abstraction, data structures, and more with C, Python, SQL, and JavaScript.",
+    "link": "https://cs50.harvard.edu/x/",
+    "category": "Computer Science",
+    "difficulty": "Beginner",
+    "tags": ["C", "Python", "algorithms", "data-structures"],
+    "contributor_id": null
+  },
+  {
+    "title": "Algorithms Part I - Princeton",
+    "description": "Essential information every serious programmer needs to know about algorithms and data structures taught by Princeton University.",
+    "link": "https://www.coursera.org/learn/algorithms-part1",
+    "category": "Computer Science",
+    "difficulty": "Intermediate",
+    "tags": ["algorithms", "Java", "data-structures", "sorting"],
+    "contributor_id": null
+  },
+  {
+    "title": "Introduction to Algorithms (MIT OpenCourseWare)",
+    "description": "MIT's comprehensive course covering algorithm design and analysis, including divide-and-conquer, dynamic programming, and graph algorithms.",
+    "link": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/",
+    "category": "Computer Science",
+    "difficulty": "Advanced",
+    "tags": ["algorithms", "complexity", "graphs", "dynamic-programming"],
+    "contributor_id": null
+  },
+  {
+    "title": "Data Structures - Full Course with Visualizations",
+    "description": "A comprehensive freeCodeCamp course teaching fundamental data structures with visual explanations and coding examples.",
+    "link": "https://www.youtube.com/watch?v=RBSGKlAvoiM",
+    "category": "Computer Science",
+    "difficulty": "Beginner",
+    "tags": ["data-structures", "arrays", "linked-lists", "trees"],
+    "contributor_id": null
+  },
+  {
+    "title": "Operating Systems: Three Easy Pieces",
+    "description": "A free online book covering virtualization, concurrency, and persistence in operating systems with clear explanations.",
+    "link": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "category": "Computer Science",
+    "difficulty": "Intermediate",
+    "tags": ["operating-systems", "concurrency", "memory", "processes"],
+    "contributor_id": null
+  },
+  {
+    "title": "Discrete Mathematics for Computer Science",
+    "description": "Learn the mathematical foundations essential for computer science including logic, sets, graphs, and combinatorics.",
+    "link": "https://www.coursera.org/specializations/discrete-mathematics",
+    "category": "Computer Science",
+    "difficulty": "Intermediate",
+    "tags": ["mathematics", "logic", "graphs", "theory"],
+    "contributor_id": null
+  },
+  {
+    "title": "Computer Networks: A Top-Down Approach",
+    "description": "Comprehensive introduction to computer networking, covering application, transport, network, and link layers.",
+    "link": "https://gaia.cs.umass.edu/kurose_ross/index.php",
+    "category": "Computer Science",
+    "difficulty": "Advanced",
+    "tags": ["networking", "protocols", "TCP/IP", "HTTP"],
+    "contributor_id": null
+  },
+  {
+    "title": "The Odin Project - Full Stack JavaScript",
+    "description": "A complete free curriculum to learn full-stack web development with JavaScript, Node.js, and React from scratch.",
+    "link": "https://www.theodinproject.com/paths/full-stack-javascript",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["JavaScript", "React", "Node.js", "full-stack"],
+    "contributor_id": null
+  },
+  {
+    "title": "MDN Web Docs - Learn Web Development",
+    "description": "Mozilla's comprehensive documentation and learning pathway for HTML, CSS, JavaScript, and web APIs.",
+    "link": "https://developer.mozilla.org/en-US/docs/Learn",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["HTML", "CSS", "JavaScript", "documentation"],
+    "contributor_id": null
+  },
+  {
+    "title": "JavaScript Algorithms and Data Structures",
+    "description": "FreeCodeCamp's interactive curriculum teaching JavaScript fundamentals through algorithm challenges and projects.",
+    "link": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["JavaScript", "algorithms", "ES6", "functional-programming"],
+    "contributor_id": null
+  },
+  {
+    "title": "React Official Documentation & Tutorial",
+    "description": "Learn React directly from the official docs with interactive tutorials and comprehensive API references.",
+    "link": "https://react.dev/learn",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["React", "components", "hooks", "frontend"],
+    "contributor_id": null
+  },
+  {
+    "title": "TypeScript Deep Dive",
+    "description": "A comprehensive guide to TypeScript covering types, interfaces, generics, decorators, and advanced patterns.",
+    "link": "https://basarat.gitbook.io/typescript/",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["TypeScript", "types", "JavaScript", "static-typing"],
+    "contributor_id": null
+  },
+  {
+    "title": "Frontend Masters - Complete Intro to Web Development",
+    "description": "Learn the fundamentals of web development including HTML, CSS, JavaScript, and basic programming concepts.",
+    "link": "https://frontendmasters.com/courses/web-development-v3/",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["HTML", "CSS", "JavaScript", "frontend"],
+    "contributor_id": null
+  },
+  {
+    "title": "Next.js 14 - Full Stack Development",
+    "description": "Master the latest Next.js features including App Router, Server Components, and Server Actions for modern web apps.",
+    "link": "https://nextjs.org/learn",
+    "category": "Web Development",
+    "difficulty": "Advanced",
+    "tags": ["Next.js", "React", "SSR", "full-stack"],
+    "contributor_id": null
+  },
+  {
+    "title": "Web Performance Optimization",
+    "description": "Learn techniques to optimize website performance, including lazy loading, code splitting, and performance metrics.",
+    "link": "https://web.dev/learn/performance/",
+    "category": "Web Development",
+    "difficulty": "Advanced",
+    "tags": ["performance", "optimization", "lighthouse", "core-web-vitals"],
+    "contributor_id": null
+  },
+  {
+    "title": "Tailwind CSS - From Zero to Production",
+    "description": "Official Tailwind CSS course teaching utility-first CSS framework for rapid UI development.",
+    "link": "https://tailwindcss.com/docs",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["CSS", "Tailwind", "styling", "design-systems"],
+    "contributor_id": null
+  },
+  {
+    "title": "Google Cloud Fundamentals: Core Infrastructure",
+    "description": "Introduction to Google Cloud Platform services including Compute Engine, Cloud Storage, and networking fundamentals.",
+    "link": "https://www.coursera.org/learn/gcp-fundamentals",
+    "category": "Cloud Computing",
+    "difficulty": "Beginner",
+    "tags": ["GCP", "cloud", "infrastructure", "networking"],
+    "contributor_id": null
+  },
+  {
+    "title": "AWS Cloud Practitioner Essentials",
+    "description": "Free AWS training covering cloud concepts, security, architecture, pricing, and core AWS services.",
+    "link": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/",
+    "category": "Cloud Computing",
+    "difficulty": "Beginner",
+    "tags": ["AWS", "cloud", "EC2", "S3"],
+    "contributor_id": null
+  },
+  {
+    "title": "Microsoft Azure Fundamentals",
+    "description": "Learn Azure cloud concepts, core services, security, pricing, and support with Microsoft's official learning path.",
+    "link": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/",
+    "category": "Cloud Computing",
+    "difficulty": "Beginner",
+    "tags": ["Azure", "cloud", "Microsoft", "fundamentals"],
+    "contributor_id": null
+  },
+  {
+    "title": "AWS Solutions Architect Associate Path",
+    "description": "Comprehensive preparation for AWS Solutions Architect certification covering design resilient architectures.",
+    "link": "https://aws.amazon.com/training/learn-about/architect/",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["AWS", "architecture", "certification", "solutions"],
+    "contributor_id": null
+  },
+  {
+    "title": "Serverless Framework - Complete Guide",
+    "description": "Learn to build and deploy serverless applications using AWS Lambda, API Gateway, and other cloud services.",
+    "link": "https://www.serverless.com/framework/docs",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["serverless", "Lambda", "API", "microservices"],
+    "contributor_id": null
+  },
+  {
+    "title": "Cloud Native Computing Foundation Training",
+    "description": "Free courses on cloud-native technologies including containers, orchestration, and distributed systems.",
+    "link": "https://www.cncf.io/training/",
+    "category": "Cloud Computing",
+    "difficulty": "Advanced",
+    "tags": ["cloud-native", "containers", "orchestration", "CNCF"],
+    "contributor_id": null
+  },
+  {
+    "title": "Terraform - Infrastructure as Code",
+    "description": "Master Terraform for managing cloud infrastructure with declarative configuration files across multiple providers.",
+    "link": "https://developer.hashicorp.com/terraform/tutorials",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["Terraform", "IaC", "infrastructure", "automation"],
+    "contributor_id": null
+  },
+  {
+    "title": "Blockchain Basics - IBM",
+    "description": "Introduction to blockchain technology, distributed ledgers, consensus mechanisms, and use cases.",
+    "link": "https://www.coursera.org/learn/blockchain-basics",
+    "category": "Blockchain & Web3",
+    "difficulty": "Beginner",
+    "tags": ["blockchain", "distributed-ledger", "consensus", "cryptography"],
+    "contributor_id": null
+  },
+  {
+    "title": "Solidity by Example",
+    "description": "Learn Solidity smart contract programming through practical examples and best practices for Ethereum development.",
+    "link": "https://solidity-by-example.org/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Intermediate",
+    "tags": ["Solidity", "Ethereum", "smart-contracts", "Web3"],
+    "contributor_id": null
+  },
+  {
+    "title": "Ethereum Development Documentation",
+    "description": "Official Ethereum documentation covering concepts, development tools, and building decentralized applications.",
+    "link": "https://ethereum.org/en/developers/docs/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Intermediate",
+    "tags": ["Ethereum", "dApps", "smart-contracts", "Web3"],
+    "contributor_id": null
+  },
+  {
+    "title": "CryptoZombies - Learn Solidity",
+    "description": "Interactive code school teaching Solidity development through building your own crypto-collectibles game.",
+    "link": "https://cryptozombies.io/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Beginner",
+    "tags": ["Solidity", "game", "interactive", "smart-contracts"],
+    "contributor_id": null
+  },
+  {
+    "title": "Web3.js Complete Guide",
+    "description": "Learn to interact with Ethereum blockchain using Web3.js library for building decentralized applications.",
+    "link": "https://web3js.readthedocs.io/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Intermediate",
+    "tags": ["Web3.js", "JavaScript", "Ethereum", "dApps"],
+    "contributor_id": null
+  },
+  {
+    "title": "Alchemy University - Ethereum Developer Bootcamp",
+    "description": "Free comprehensive bootcamp covering Ethereum development, smart contracts, and Web3 ecosystem.",
+    "link": "https://www.alchemy.com/university",
+    "category": "Blockchain & Web3",
+    "difficulty": "Advanced",
+    "tags": ["Ethereum", "bootcamp", "smart-contracts", "DeFi"],
+    "contributor_id": null
+  },
+  {
+    "title": "Smart Contract Security Best Practices",
+    "description": "Essential security guidelines for writing secure smart contracts and avoiding common vulnerabilities.",
+    "link": "https://consensys.github.io/smart-contract-best-practices/",
+    "category": "Blockchain & Web3",
+    "difficulty": "Advanced",
+    "tags": ["security", "smart-contracts", "vulnerabilities", "auditing"],
+    "contributor_id": null
+  },
+  {
+    "title": "Machine Learning - Andrew Ng (Stanford)",
+    "description": "The most popular machine learning course covering supervised learning, neural networks, and practical ML advice.",
+    "link": "https://www.coursera.org/learn/machine-learning",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["machine-learning", "neural-networks", "Python", "algorithms"],
+    "contributor_id": null
+  },
+  {
+    "title": "Deep Learning Specialization",
+    "description": "Five-course specialization on deep learning, CNNs, RNNs, and building neural networks with TensorFlow.",
+    "link": "https://www.coursera.org/specializations/deep-learning",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Advanced",
+    "tags": ["deep-learning", "TensorFlow", "CNNs", "RNNs"],
+    "contributor_id": null
+  },
+  {
+    "title": "Kaggle Learn - Intro to Machine Learning",
+    "description": "Fast-paced practical introduction to machine learning with hands-on Python exercises using real datasets.",
+    "link": "https://www.kaggle.com/learn/intro-to-machine-learning",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["machine-learning", "Python", "scikit-learn", "practical"],
+    "contributor_id": null
+  },
+  {
+    "title": "Fast.ai - Practical Deep Learning",
+    "description": "Top-down approach to learning deep learning with PyTorch, focusing on practical applications first.",
+    "link": "https://course.fast.ai/",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["deep-learning", "PyTorch", "computer-vision", "NLP"],
+    "contributor_id": null
+  },
+  {
+    "title": "Python for Data Analysis",
+    "description": "Comprehensive guide to data manipulation and analysis with pandas, NumPy, and visualization libraries.",
+    "link": "https://wesmckinney.com/book/",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["Python", "pandas", "data-analysis", "NumPy"],
+    "contributor_id": null
+  },
+  {
+    "title": "TensorFlow Developer Certificate",
+    "description": "Official TensorFlow curriculum preparing you to build and train neural networks for computer vision and NLP.",
+    "link": "https://www.tensorflow.org/certificate",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["TensorFlow", "certification", "neural-networks", "ML"],
+    "contributor_id": null
+  },
+  {
+    "title": "Natural Language Processing Specialization",
+    "description": "Learn NLP with classification, vector spaces, sequence models, and attention mechanisms using Python.",
+    "link": "https://www.coursera.org/specializations/natural-language-processing",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Advanced",
+    "tags": ["NLP", "transformers", "BERT", "text-processing"],
+    "contributor_id": null
+  },
+  {
+    "title": "Data Science Professional Certificate - IBM",
+    "description": "Complete data science program covering Python, SQL, data visualization, machine learning, and capstone projects.",
+    "link": "https://www.coursera.org/professional-certificates/ibm-data-science",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["data-science", "Python", "SQL", "visualization"],
+    "contributor_id": null
+  },
+  {
+    "title": "Flutter Development Bootcamp",
+    "description": "Complete Flutter course teaching you to build beautiful native mobile apps for iOS and Android using Dart.",
+    "link": "https://docs.flutter.dev/get-started",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Flutter", "Dart", "mobile", "cross-platform"],
+    "contributor_id": null
+  },
+  {
+    "title": "React Native - The Practical Guide",
+    "description": "Build native mobile apps with React and JavaScript. Learn navigation, styling, and native device features.",
+    "link": "https://reactnative.dev/docs/getting-started",
+    "category": "Mobile Development",
+    "difficulty": "Intermediate",
+    "tags": ["React-Native", "JavaScript", "mobile", "cross-platform"],
+    "contributor_id": null
+  },
+  {
+    "title": "Android Development for Beginners - Google",
+    "description": "Official Google course teaching Android app development with Kotlin, covering UI design and app architecture.",
+    "link": "https://developer.android.com/courses",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Android", "Kotlin", "mobile", "Google"],
+    "contributor_id": null
+  },
+  {
+    "title": "iOS App Development with SwiftUI",
+    "description": "Learn to build iOS apps using SwiftUI, Apple's modern declarative framework for building user interfaces.",
+    "link": "https://developer.apple.com/tutorials/swiftui",
+    "category": "Mobile Development",
+    "difficulty": "Intermediate",
+    "tags": ["iOS", "SwiftUI", "Swift", "Apple"],
+    "contributor_id": null
+  },
+  {
+    "title": "Mobile App Design Patterns",
+    "description": "Learn essential design patterns and best practices for creating intuitive mobile user experiences.",
+    "link": "https://www.interaction-design.org/literature/article/mobile-design-pattern-gallery",
+    "category": "Mobile Development",
+    "difficulty": "Intermediate",
+    "tags": ["UI/UX", "design-patterns", "mobile", "user-experience"],
+    "contributor_id": null
+  },
+  {
+    "title": "Firebase for Mobile Development",
+    "description": "Comprehensive guide to using Firebase for authentication, databases, storage, and analytics in mobile apps.",
+    "link": "https://firebase.google.com/docs",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Firebase", "backend", "authentication", "real-time"],
+    "contributor_id": null
+  },
+  {
+    "title": "Jetpack Compose - Modern Android UI",
+    "description": "Learn Android's modern toolkit for building native UI with Kotlin and declarative programming approach.",
+    "link": "https://developer.android.com/jetpack/compose/tutorial",
+    "category": "Mobile Development",
+    "difficulty": "Advanced",
+    "tags": ["Android", "Jetpack-Compose", "Kotlin", "UI"],
+    "contributor_id": null
+  },
+  {
+    "title": "Docker for Beginners",
+    "description": "Learn containerization with Docker: creating images, running containers, and managing multi-container apps.",
+    "link": "https://docker-curriculum.com/",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "tags": ["Docker", "containers", "virtualization", "deployment"],
+    "contributor_id": null
+  },
+  {
+    "title": "Kubernetes Basics",
+    "description": "Official Kubernetes tutorial covering pods, deployments, services, and orchestrating containerized applications.",
+    "link": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Kubernetes", "orchestration", "containers", "microservices"],
+    "contributor_id": null
+  },
+  {
+    "title": "GitHub Actions - CI/CD Automation",
+    "description": "Learn to automate workflows with GitHub Actions including testing, building, and deploying applications.",
+    "link": "https://docs.github.com/en/actions/learn-github-actions",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "tags": ["CI/CD", "GitHub", "automation", "testing"],
+    "contributor_id": null
+  },
+  {
+    "title": "Jenkins - Continuous Integration",
+    "description": "Master Jenkins for automating builds, tests, and deployments with pipelines and integrations.",
+    "link": "https://www.jenkins.io/doc/tutorials/",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Jenkins", "CI/CD", "automation", "pipelines"],
+    "contributor_id": null
+  },
+  {
+    "title": "Linux Administration Handbook",
+    "description": "Comprehensive guide to Linux system administration covering servers, networking, security, and troubleshooting.",
+    "link": "https://www.oreilly.com/library/view/linux-administration-handbook/9780134277554/",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Linux", "system-admin", "servers", "networking"],
+    "contributor_id": null
+  },
+  {
+    "title": "Prometheus & Grafana - Monitoring",
+    "description": "Learn to monitor applications and infrastructure using Prometheus for metrics and Grafana for visualization.",
+    "link": "https://prometheus.io/docs/tutorials/getting_started/",
+    "category": "DevOps",
+    "difficulty": "Advanced",
+    "tags": ["monitoring", "Prometheus", "Grafana", "observability"],
+    "contributor_id": null
+  },
+  {
+    "title": "Ansible for DevOps",
+    "description": "Automate infrastructure provisioning and configuration management with Ansible playbooks and best practices.",
+    "link": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Ansible", "automation", "configuration", "IaC"],
+    "contributor_id": null
+  },
+  {
+    "title": "DevOps Roadmap",
+    "description": "Comprehensive learning path covering all essential DevOps tools, practices, and methodologies step-by-step.",
+    "link": "https://roadmap.sh/devops",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "tags": ["roadmap", "learning-path", "DevOps", "career"],
+    "contributor_id": null
+  },
+  {
+    "title": "Introduction to Cybersecurity - Cisco",
+    "description": "Free beginner course covering cybersecurity fundamentals, threats, and how to protect systems and networks.",
+    "link": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["cybersecurity", "security", "threats", "fundamentals"],
+    "contributor_id": null
+  },
+  {
+    "title": "OWASP Top 10 - Web Application Security",
+    "description": "Learn about the top 10 most critical web application security risks and how to prevent them.",
+    "link": "https://owasp.org/www-project-top-ten/",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["OWASP", "web-security", "vulnerabilities", "best-practices"],
+    "contributor_id": null
+  },
+  {
+    "title": "TryHackMe - Practical Hacking Labs",
+    "description": "Learn cybersecurity through hands-on exercises and guided rooms covering pentesting, CTFs, and defensive security.",
+    "link": "https://tryhackme.com/",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["pentesting", "CTF", "hands-on", "hacking"],
+    "contributor_id": null
+  },
+  {
+    "title": "Cryptography I - Stanford",
+    "description": "Learn cryptographic primitives and how to use them correctly for secure communications and data protection.",
+    "link": "https://www.coursera.org/learn/crypto",
+    "category": "Cybersecurity",
+    "difficulty": "Advanced",
+    "tags": ["cryptography", "encryption", "security", "mathematics"],
+    "contributor_id": null
+  },
+  {
+    "title": "Ethical Hacking Essentials",
+    "description": "Comprehensive course on ethical hacking techniques, tools, and methodologies for penetration testing.",
+    "link": "https://www.eccouncil.org/train-certify/ethical-hacking-essentials-ehe/",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["ethical-hacking", "pentesting", "security", "CEH"],
+    "contributor_id": null
+  },
+  {
+    "title": "Cybersecurity Fundamentals - IBM",
+    "description": "Learn security principles, risk management, incident response, and compliance in enterprise environments.",
+    "link": "https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["security", "risk-management", "compliance", "IBM"],
+    "contributor_id": null
+  },
+  {
+    "title": "Network Security - Wireshark",
+    "description": "Master network protocol analysis and troubleshooting with Wireshark for security monitoring and debugging.",
+    "link": "https://www.wireshark.org/docs/",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["networking", "Wireshark", "packet-analysis", "monitoring"],
+    "contributor_id": null
+  },
+  {
+    "title": "Secure Coding Practices",
+    "description": "Learn to write secure code and prevent common vulnerabilities like injection, XSS, and authentication flaws.",
+    "link": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["secure-coding", "OWASP", "vulnerabilities", "development"],
+    "contributor_id": null
+  }
+]
