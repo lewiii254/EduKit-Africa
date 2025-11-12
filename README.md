@@ -143,6 +143,11 @@ Ensure you have the following installed:
    
    The app will be available at `http://localhost:8080`
 
+5. **Seed the database with sample resources** (optional but recommended):
+   - Navigate to `/seed` in your browser
+   - Click "Seed Database" to populate with 80+ curated learning resources
+   - Or run the seed function programmatically in your code
+
 5. **Build for production**
    ```bash
    npm run build
