@@ -14,6 +14,7 @@ export function Navigation() {
     { to: '/', label: 'Home' },
     { to: '/tracks', label: 'Tracks' },
     { to: '/youtube', label: 'YouTube' },
+    { to: '/free-certificates', label: 'Free Certificates' },
     { to: '/contribute', label: 'Contribute' },
     { to: '/about', label: 'About' },
     ...(user ? [{ to: '/dashboard', label: 'Dashboard' }] : []),
