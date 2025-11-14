@@ -266,23 +266,61 @@ All tables have RLS enabled with the following policies:
 
 ## 🤝 Contributing
 
-We love contributions! EduKit Africa is built by the community, for the community.
+We love contributions from the community! There are many ways to contribute to EduKit Africa:
 
-### How to Contribute
+### Ways to Contribute
 
-#### 1. **Report Bugs**
-- Use GitHub Issues to report bugs
-- Include detailed reproduction steps
-- Add screenshots if applicable
+#### 1. 📚 Contribute Learning Resources
+The easiest way to contribute is by sharing quality learning resources:
+- Visit the [Contribute page](https://edukit-africa.lovable.app/contribute) on our platform
+- Sign in with your account
+- Choose the type of contribution:
+  - **Learning Resources**: Tutorials, articles, courses, documentation
+  - **Free Certificates**: Free certification programs from reputable providers
+  - **YouTube Content**: Educational videos and channels
+- Fill in the details and submit
 
-#### 2. **Suggest Features**
-- Open a GitHub Issue with the `enhancement` label
-- Describe the feature and its benefits
-- Discuss implementation approach
+#### 2. 💻 Contribute Code
+Help improve the platform itself:
+- Check out our [Contributing Guide](CONTRIBUTING.md) for detailed setup instructions
+- Browse [good first issues](https://github.com/lewiii254/EduKit-Africa/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- Areas we need help:
+  - 🐛 Bug fixes
+  - ✨ New features (learning paths, advanced search, analytics)
+  - 📝 Documentation improvements
+  - 🎨 UI/UX enhancements
+  - ♿ Accessibility improvements
+  - 🌍 Internationalization/Translations
 
-#### 3. **Submit Code**
+#### 3. 🎨 Design Contributions
+- Propose UI/UX improvements
+- Create mockups for new features
+- Improve accessibility
+- Design promotional materials
 
-**Step-by-step guide:**
+#### 4. 📖 Documentation
+- Improve existing documentation
+- Write tutorials on using the platform
+- Translate documentation to other languages
+- Create video guides
+
+#### 5. 🧪 Testing & Feedback
+- Test new features and report bugs
+- Provide UX feedback
+- Suggest improvements
+- Review pull requests
+
+### Contribution Guidelines
+
+Before contributing resources or code, please ensure:
+- ✅ Resources are **freely accessible** or have substantial free tiers
+- ✅ Information provided is **accurate and complete**
+- ✅ Content is **high-quality** and valuable to learners
+- ✅ No duplicate submissions - search existing resources first
+- ✅ Follow our [Code of Conduct](#code-of-conduct)
+- ✅ Read our detailed [Contributing Guide](CONTRIBUTING.md) for code contributions
+
+### Code Contribution Quick Start
 
 1. **Fork the repository**
    ```bash
@@ -339,9 +377,6 @@ We love contributions! EduKit Africa is built by the community, for the communit
    - Fill in the PR template
    - Wait for review
 
-#### 4. **Share Resources**
-The easiest way to contribute is by sharing quality learning resources through the platform itself!
-
 ### Development Guidelines
 
 #### Code Style
@@ -350,35 +385,6 @@ The easiest way to contribute is by sharing quality learning resources through t
 - Use semantic HTML elements
 - Prefer functional components with hooks
 - Keep components small and focused
-
-#### Component Structure
-```typescript
-// 1. Imports
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-
-// 2. Types/Interfaces
-interface MyComponentProps {
-  title: string;
-}
-
-// 3. Component
-export function MyComponent({ title }: MyComponentProps) {
-  // 4. State and hooks
-  const [count, setCount] = useState(0);
-  
-  // 5. Event handlers
-  const handleClick = () => setCount(count + 1);
-  
-  // 6. Render
-  return (
-    <div>
-      <h1>{title}</h1>
-      <Button onClick={handleClick}>Count: {count}</Button>
-    </div>
-  );
-}
-```
 
 #### Styling Guidelines
 - Use Tailwind CSS utility classes
@@ -394,23 +400,18 @@ If your contribution requires database changes:
 3. Update RLS policies if needed
 4. Test with different user roles
 
-### What We're Looking For
+### Recognition
 
-**High Priority:**
-- 🐛 Bug fixes
-- 📚 Documentation improvements
-- ♿ Accessibility enhancements
-- 🌐 Internationalization (i18n)
-- ✅ Test coverage
+All contributors are recognized in our:
+- [Contributors Page](https://github.com/lewiii254/EduKit-Africa/graphs/contributors)
+- Monthly community highlights
+- Annual contributor showcase
 
-**Feature Ideas:**
-- 📌 Bookmarking system
-- 👥 User profile pages
-- 🔔 Notification system
-- 📊 Analytics dashboard
-- 🎯 Learning paths/roadmaps
-- 💬 Discussion forums
-- 🏆 Gamification elements
+### Questions?
+
+- 💬 Join our [Discussions](https://github.com/lewiii254/EduKit-Africa/discussions)
+- 📧 Email us at [contribute@edukit-africa.com](mailto:contribute@edukit-africa.com)
+- 🐛 [Report issues](https://github.com/lewiii254/EduKit-Africa/issues)
 
 ---
 
