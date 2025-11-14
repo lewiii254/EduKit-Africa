@@ -22,20 +22,28 @@
 
 ## 📖 Table of Contents
 
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
+- [About the Project](#-about-the-project)
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [System Architecture](#️-system-architecture)
+- [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Environment Variables](#environment-variables)
-- [Database Schema](#database-schema)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Code of Conduct](#code-of-conduct)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
+- [Database Schema](#️-database-schema)
+- [Usage](#-usage)
+- [Contributing](#-contributing)
+  - [Ways to Contribute](#-ways-to-contribute)
+  - [Code Contribution Quick Start](#-code-contribution-quick-start)
+  - [Priority Areas](#-priority-areas-for-contribution)
+- [Join Our Community](#-join-our-community)
+- [Code of Conduct](#-code-of-conduct)
+- [Security](#-security)
+- [Roadmap](#️-roadmap)
+- [License](#-license)
+- [Contact & Community](#-contact--community)
+- [Acknowledgments](#-acknowledgments)
+- [Good First Issues](#-good-first-issues)
 
 ---
 
@@ -734,28 +742,25 @@ All contributors are recognized in our:
 
 ## 📜 Code of Conduct
 
-### Our Pledge
+We are committed to providing a welcoming and inclusive experience for everyone. Please read our full [Code of Conduct](CODE_OF_CONDUCT.md) to understand the standards we uphold.
 
-We are committed to providing a welcoming and inclusive experience for everyone. We pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+**In summary:**
+- ✅ Be respectful and inclusive
+- ✅ Welcome newcomers warmly
+- ✅ Accept constructive criticism gracefully
+- ✅ Focus on what's best for the community
+- ❌ No harassment or discriminatory behavior
+- ❌ No trolling or personal attacks
 
-### Our Standards
+**Violations?** Report to [contribute@edukit-africa.com](mailto:contribute@edukit-africa.com)
 
-**Positive behavior includes:**
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints
-- Gracefully accepting constructive criticism
-- Focusing on what's best for the community
-- Showing empathy towards community members
+---
 
-**Unacceptable behavior includes:**
-- Trolling, insulting/derogatory comments, and personal attacks
-- Public or private harassment
-- Publishing others' private information
-- Other conduct which could reasonably be considered inappropriate
+## 🔒 Security
 
-### Enforcement
+Found a security vulnerability? Please see our [Security Policy](SECURITY.md) for how to report it responsibly.
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainers. All complaints will be reviewed and investigated promptly and fairly.
+**Do not report security issues publicly.** Email security@edukit-africa.com instead.
 
 ---
 
