@@ -8,10 +8,32 @@ const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
-export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-  auth: {
-    storage: localStorage,
-    persistSession: true,
-    autoRefreshToken: true,
+// Create a placeholder client if environment variables are not set
+// This prevents the app from crashing but disables Supabase functionality
+const createSupabaseClient = () => {
+  if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+    console.warn('Supabase environment variables are not set. Using mock client.');
+    // Return a mock client with minimal functionality to prevent crashes
+    return createClient<Database>(
+      'https://placeholder.supabase.co',
+      'placeholder-key',
+      {
+        auth: {
+          storage: localStorage,
+          persistSession: false,
+          autoRefreshToken: false,
+        }
+      }
+    );
   }
-});
+
+  return createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+    auth: {
+      storage: localStorage,
+      persistSession: true,
+      autoRefreshToken: true,
+    }
+  });
+};
+
+export const supabase = createSupabaseClient();

@@ -129,12 +129,22 @@ Ensure you have the following installed:
 
 3. **Set up environment variables**
    
-   Create a `.env` file in the root directory with your Supabase credentials:
+   Copy the example environment file and update it with your Supabase credentials:
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Then edit `.env` with your actual Supabase credentials:
    ```env
    VITE_SUPABASE_URL=your_supabase_url
    VITE_SUPABASE_PUBLISHABLE_KEY=your_anon_key
    VITE_SUPABASE_PROJECT_ID=your_project_id
    ```
+   
+   **Note**: The application will still run without valid Supabase credentials (using a mock client), but authentication and database features will not work. To use the full functionality, you need to:
+   - Create a free account at [Supabase](https://supabase.com)
+   - Create a new project
+   - Copy your project URL and anon key from the project settings
 
 4. **Run the development server**
    ```bash
