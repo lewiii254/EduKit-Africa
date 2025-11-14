@@ -7,6 +7,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { RatingDialog } from './RatingDialog';
 import { useBookmarks } from '@/hooks/useBookmarks';
+import { ShareButtons } from './ShareButtons';
 
 interface ResourceCardProps {
   resource: {
@@ -125,6 +126,13 @@ export function ResourceCard({ resource }: ResourceCardProps) {
                   <span>{resource.view_count}</span>
                 </div>
               )}
+            </div>
+
+            <div className="pt-2 border-t border-border">
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">Share this resource</span>
+                <ShareButtons resource={resource} />
+              </div>
             </div>
           </div>
         </CardContent>

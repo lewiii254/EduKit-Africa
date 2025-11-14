@@ -83,7 +83,11 @@ export default function Index() {
           <Card className="border-2 hover:border-primary/50 transition-colors">
             <CardContent className="pt-6 text-center">
               <Users className="h-10 w-10 text-primary mx-auto mb-3" />
-              <div className="text-3xl font-bold mb-1">{stats.totalContributors}+</div>
+              <div className="text-3xl font-bold mb-1">
+                {stats.totalContributors >= 3 && stats.totalContributors < 4 
+                  ? '3+' 
+                  : `${stats.totalContributors}+`}
+              </div>
               <div className="text-muted-foreground">Contributors</div>
             </CardContent>
           </Card>
