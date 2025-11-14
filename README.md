@@ -7,8 +7,15 @@
   
   [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
+  [![React](https://img.shields.io/badge/React-18.3-61DAFB.svg)](https://reactjs.org/)
+  [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF.svg)](https://vitejs.dev/)
+  [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E.svg)](https://supabase.com/)
+  ![GitHub contributors](https://img.shields.io/github/contributors/lewiii254/EduKit-Africa)
+  ![GitHub stars](https://img.shields.io/github/stars/lewiii254/EduKit-Africa)
+  ![GitHub issues](https://img.shields.io/github/issues/lewiii254/EduKit-Africa)
   
-  [Report Bug](https://github.com/lewiii254/EduKit-Africa/issues) · [Request Feature](https://github.com/lewiii254/EduKit-Africa/issues)
+  [🌐 Live Demo](https://edukit-africa.lovable.app) · [🐛 Report Bug](https://github.com/lewiii254/EduKit-Africa/issues) · [💡 Request Feature](https://github.com/lewiii254/EduKit-Africa/issues) · [🤝 Join Discord](#contact)
 </div>
 
 ---
@@ -36,13 +43,47 @@
 
 **EduKit Africa** is an open-source platform dedicated to curating and sharing high-quality learning resources in technology fields. Built by African developers for the global tech community, we believe education should be accessible to everyone.
 
-### Our Mission
+### 🎯 Our Mission
 
 Empower African tech talent through open-source education by:
 - 📚 Curating high-quality learning resources across multiple tech domains
 - 🤝 Building a community-driven platform where knowledge is shared freely
 - 🌟 Showcasing contributions from African developers and educators
 - 🚀 Making tech education accessible to learners worldwide
+
+### 🔄 User Journey Flow
+
+```mermaid
+graph TD
+    A[👤 New Visitor] --> B{Explore Platform}
+    B --> C[Browse Resources]
+    B --> D[Search & Filter]
+    B --> E[View Tracks]
+    
+    C --> F{Sign Up?}
+    D --> F
+    E --> F
+    
+    F -->|No| G[Continue Browsing]
+    F -->|Yes| H[🔐 Create Account]
+    
+    H --> I[📊 Access Dashboard]
+    I --> J[Contribute Resources]
+    I --> K[Rate & Review]
+    I --> L[Bookmark Favorites]
+    I --> M[Export Bookmarks]
+    
+    J --> N[📈 Track Contributions]
+    K --> N
+    L --> N
+    
+    G --> O[View Resource Details]
+    N --> O
+    
+    style H fill:#3ECF8E
+    style I fill:#646CFF
+    style N fill:#61DAFB
+```
 
 ---
 
@@ -78,6 +119,38 @@ Empower African tech talent through open-source education by:
 
 ## 🛠️ Tech Stack
 
+```mermaid
+graph LR
+    subgraph Frontend
+        A[React 18] --> B[TypeScript]
+        B --> C[Vite]
+        C --> D[Tailwind CSS]
+        D --> E[shadcn/ui]
+        E --> F[React Router]
+        F --> G[TanStack Query]
+    end
+    
+    subgraph Backend
+        H[(PostgreSQL)] --> I[Supabase Auth]
+        I --> J[RLS Policies]
+        J --> K[Realtime]
+    end
+    
+    subgraph DevTools
+        L[ESLint] --> M[TypeScript ESLint]
+        M --> N[Lucide Icons]
+    end
+    
+    Frontend --> Backend
+    DevTools -.->|Code Quality| Frontend
+    
+    style A fill:#61DAFB
+    style B fill:#3178C6
+    style C fill:#646CFF
+    style H fill:#336791
+    style I fill:#3ECF8E
+```
+
 ### Frontend
 - **React 18** - UI library
 - **TypeScript** - Type safety
@@ -98,6 +171,65 @@ Empower African tech talent through open-source education by:
 - **ESLint** - Code linting
 - **TypeScript ESLint** - TypeScript-specific linting
 - **Lucide React** - Icon library
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TB
+    subgraph Client["🖥️ Client Layer"]
+        UI[React UI Components]
+        Router[React Router]
+        State[TanStack Query State]
+    end
+    
+    subgraph Auth["🔐 Authentication Layer"]
+        AuthUI[Auth Components]
+        AuthContext[Auth Context]
+        AuthGuard[Protected Routes]
+    end
+    
+    subgraph API["☁️ API Layer (Supabase)"]
+        SBAUTH[Supabase Auth]
+        SBDB[PostgreSQL Database]
+        RLS[Row Level Security]
+        RT[Realtime Subscriptions]
+    end
+    
+    subgraph Data["💾 Data Layer"]
+        Profiles[(Profiles)]
+        Resources[(Resources)]
+        Ratings[(Ratings)]
+        Bookmarks[(Bookmarks)]
+        Views[(Views)]
+    end
+    
+    UI --> Router
+    Router --> State
+    State --> AuthContext
+    
+    AuthUI --> AuthContext
+    AuthContext --> SBAUTH
+    AuthGuard --> SBAUTH
+    
+    State --> SBDB
+    SBAUTH --> RLS
+    SBDB --> RLS
+    
+    RLS --> Profiles
+    RLS --> Resources
+    RLS --> Ratings
+    RLS --> Bookmarks
+    RLS --> Views
+    
+    RT -.->|Real-time Updates| State
+    
+    style UI fill:#61DAFB
+    style SBAUTH fill:#3ECF8E
+    style SBDB fill:#336791
+    style RLS fill:#FF6B6B
+```
 
 ---
 
@@ -157,6 +289,60 @@ Ensure you have the following installed:
 
 ## 🗄️ Database Schema
 
+```mermaid
+erDiagram
+    profiles ||--o{ resources : contributes
+    profiles ||--o{ ratings : creates
+    profiles ||--o{ bookmarks : saves
+    profiles ||--o{ resource_views : tracks
+    resources ||--o{ ratings : receives
+    resources ||--o{ bookmarks : has
+    resources ||--o{ resource_views : accumulates
+
+    profiles {
+        uuid id PK
+        text username UK
+        text avatar_url
+        timestamptz created_at
+    }
+
+    resources {
+        uuid id PK
+        text title
+        text description
+        text link
+        text category
+        text difficulty
+        text[] tags
+        uuid contributor_id FK
+        int view_count
+        timestamptz created_at
+    }
+
+    ratings {
+        uuid id PK
+        uuid resource_id FK
+        uuid user_id FK
+        int rating
+        text comment
+        timestamptz created_at
+    }
+
+    bookmarks {
+        uuid id PK
+        uuid user_id FK
+        uuid resource_id FK
+        timestamptz created_at
+    }
+
+    resource_views {
+        uuid id PK
+        uuid resource_id FK
+        uuid user_id FK
+        timestamptz viewed_at
+    }
+```
+
 ### Tables
 
 #### **profiles**
@@ -214,7 +400,7 @@ Tracks resource views for analytics
 - viewed_at: TIMESTAMPTZ
 ```
 
-### Row Level Security (RLS) Policies
+### 🔒 Row Level Security (RLS) Policies
 
 All tables have RLS enabled with the following policies:
 - **SELECT**: Public read access
@@ -266,9 +452,56 @@ All tables have RLS enabled with the following policies:
 
 ## 🤝 Contributing
 
+<div align="center">
+
+### 🌟 We're Actively Seeking Collaborators! 🌟
+
+**EduKit Africa is looking for passionate developers, designers, and educators to join our mission!**
+
+Whether you're a beginner looking to contribute to your first open-source project or an experienced developer wanting to make an impact, we welcome you!
+
+</div>
+
+```mermaid
+graph LR
+    A[🤔 Want to Contribute?] --> B{Choose Your Path}
+    
+    B --> C[📚 Content Creator]
+    B --> D[💻 Developer]
+    B --> E[🎨 Designer]
+    B --> F[📖 Technical Writer]
+    
+    C --> G[Share Resources]
+    C --> H[Rate & Review]
+    
+    D --> I[Fix Bugs]
+    D --> J[Add Features]
+    D --> K[Improve Performance]
+    
+    E --> L[UI/UX Design]
+    E --> M[Create Graphics]
+    
+    F --> N[Write Docs]
+    F --> O[Create Tutorials]
+    
+    G --> P[🎉 Become a Contributor]
+    H --> P
+    I --> P
+    J --> P
+    K --> P
+    L --> P
+    M --> P
+    N --> P
+    O --> P
+    
+    style A fill:#FFD700
+    style P fill:#32CD32
+    style B fill:#87CEEB
+```
+
 We love contributions from the community! There are many ways to contribute to EduKit Africa:
 
-### Ways to Contribute
+### 🚀 Ways to Contribute
 
 #### 1. 📚 Contribute Learning Resources
 The easiest way to contribute is by sharing quality learning resources:
@@ -320,7 +553,31 @@ Before contributing resources or code, please ensure:
 - ✅ Follow our [Code of Conduct](#code-of-conduct)
 - ✅ Read our detailed [Contributing Guide](CONTRIBUTING.md) for code contributions
 
-### Code Contribution Quick Start
+### 🔄 Contribution Workflow
+
+```mermaid
+sequenceDiagram
+    participant You
+    participant Fork
+    participant PR as Pull Request
+    participant CI as CI/CD
+    participant Main as Main Repo
+    
+    You->>Fork: 1. Fork Repository
+    You->>Fork: 2. Clone & Create Branch
+    You->>Fork: 3. Make Changes
+    You->>Fork: 4. Test Locally
+    You->>Fork: 5. Commit & Push
+    Fork->>PR: 6. Open Pull Request
+    PR->>CI: 7. Run Automated Checks
+    CI->>PR: 8. Report Results
+    PR->>Main: 9. Review & Merge
+    Main->>You: 10. 🎉 Contribution Accepted!
+    
+    Note over You,Main: Thank you for contributing!
+```
+
+### 💻 Code Contribution Quick Start
 
 1. **Fork the repository**
    ```bash
@@ -348,6 +605,8 @@ Before contributing resources or code, please ensure:
    ```bash
    npm run dev
    # Test thoroughly in the browser
+   npm run lint  # Check for code issues
+   npm run build # Ensure build succeeds
    ```
 
 6. **Commit your changes**
@@ -400,18 +659,76 @@ If your contribution requires database changes:
 3. Update RLS policies if needed
 4. Test with different user roles
 
-### Recognition
+### 🎯 Priority Areas for Contribution
+
+We're especially looking for help in these areas:
+
+| Area | Description | Difficulty | Impact |
+|------|-------------|------------|--------|
+| 🔍 **Advanced Search** | Implement full-text search with filters | Medium | High |
+| 🌐 **Internationalization** | Add multi-language support | Medium | High |
+| 📊 **Analytics Dashboard** | Build contributor and resource analytics | Medium-Hard | High |
+| 🎓 **Learning Paths** | Create guided learning tracks | Medium | High |
+| ♿ **Accessibility** | Improve WCAG compliance | Easy-Medium | High |
+| 📱 **Mobile App** | Develop React Native companion app | Hard | High |
+| 🤖 **AI Integration** | Resource recommendation system | Hard | Medium |
+| 📖 **API Documentation** | Comprehensive API docs | Easy | Medium |
+| 🧪 **Testing** | Add unit and integration tests | Medium | High |
+| 🎨 **Design System** | Expand component library | Easy-Medium | Medium |
+
+### 🏆 Recognition
 
 All contributors are recognized in our:
 - [Contributors Page](https://github.com/lewiii254/EduKit-Africa/graphs/contributors)
-- Monthly community highlights
+- Monthly community highlights on our social media
 - Annual contributor showcase
+- Special badges for significant contributions
+- Featured in our "Contributor Spotlight" blog series
 
-### Questions?
+### ❓ Questions?
 
 - 💬 Join our [Discussions](https://github.com/lewiii254/EduKit-Africa/discussions)
 - 📧 Email us at [contribute@edukit-africa.com](mailto:contribute@edukit-africa.com)
 - 🐛 [Report issues](https://github.com/lewiii254/EduKit-Africa/issues)
+- 💡 [Suggest features](https://github.com/lewiii254/EduKit-Africa/issues/new?assignees=&labels=enhancement&template=feature_request.md)
+
+---
+
+## 🌟 Join Our Community
+
+<div align="center">
+
+### We're Building Something Special - Join Us! 🚀
+
+**EduKit Africa is more than just code - it's a movement to make tech education accessible to everyone.**
+
+#### 👥 Looking for:
+- 🔹 Frontend Developers (React, TypeScript)
+- 🔹 Backend Developers (PostgreSQL, Supabase)
+- 🔹 UI/UX Designers
+- 🔹 Technical Writers
+- 🔹 DevOps Engineers
+- 🔹 Community Managers
+- 🔹 Content Curators
+
+#### 💡 What You'll Gain:
+- ✅ Real-world open-source experience
+- ✅ Collaborate with developers worldwide
+- ✅ Build your portfolio with meaningful projects
+- ✅ Learn modern web development practices
+- ✅ Make a positive impact on tech education in Africa
+- ✅ Recognition in the community
+
+#### 🤝 How to Get Involved:
+1. ⭐ **Star this repository** to show your support
+2. 🍴 **Fork the repository** and start contributing
+3. 💬 **Join our discussions** to connect with the community
+4. 📣 **Spread the word** - share EduKit Africa with others
+5. 📧 **Reach out** if you want to take on a leadership role
+
+### Let's democratize tech education together! 🌍
+
+</div>
 
 ---
 
@@ -472,33 +789,165 @@ SOFTWARE.
 
 ---
 
-## 📞 Contact
+## 📞 Contact & Community
 
-- **GitHub**: [EduKit Africa Repository](https://github.com/lewiii254/EduKit-Africa)
-- **Twitter**: [@EdukitAfrica](https://twitter.com/edukitafrica)
-- **Email**: contact@edukitafrica.org
+<div align="center">
+
+### Connect With Us
+
+| Platform | Link | Purpose |
+|----------|------|---------|
+| 💻 **GitHub** | [EduKit Africa Repository](https://github.com/lewiii254/EduKit-Africa) | Code, Issues, PRs |
+| 🐦 **Twitter** | [@EdukitAfrica](https://twitter.com/edukitafrica) | Updates & News |
+| 💬 **Discussions** | [GitHub Discussions](https://github.com/lewiii254/EduKit-Africa/discussions) | Community Chat |
+| 📧 **Email** | contact@edukitafrica.org | General Inquiries |
+| 🤝 **LinkedIn** | [EduKit Africa](#) | Professional Network |
+| 📱 **Discord** | [Join Server](#) | Real-time Chat |
+
+### 📊 Project Statistics
+
+![GitHub stars](https://img.shields.io/github/stars/lewiii254/EduKit-Africa?style=social)
+![GitHub forks](https://img.shields.io/github/forks/lewiii254/EduKit-Africa?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/lewiii254/EduKit-Africa?style=social)
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lewiii254/EduKit-Africa)
+![GitHub last commit](https://img.shields.io/github/last-commit/lewiii254/EduKit-Africa)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/lewiii254/EduKit-Africa)
+
+</div>
 
 ---
 
 ## 🙏 Acknowledgments
 
+### 🛠️ Built With
+
 - Powered by [Supabase](https://supabase.com) - Open source Firebase alternative
 - UI components from [shadcn/ui](https://ui.shadcn.com)
 - Icons by [Lucide](https://lucide.dev)
-- Inspired by the vibrant African tech community
+- Styling with [Tailwind CSS](https://tailwindcss.com)
+- Hosted on [Lovable](https://lovable.app)
+
+### 💝 Special Thanks
+
+- **Contributors**: Thank you to all our amazing [contributors](https://github.com/lewiii254/EduKit-Africa/graphs/contributors) who have helped build EduKit Africa
+- **African Tech Community**: For the inspiration and continuous support
+- **Open Source Community**: For the tools and libraries that make this possible
+- **Early Adopters**: For testing and providing valuable feedback
+
+### 🏆 Supporters
+
+If your organization would like to sponsor this project, please [reach out](mailto:contribute@edukit-africa.com)!
 
 ---
+
+## 📈 Project Metrics
+
+<div align="center">
+
+```mermaid
+pie title Resource Distribution by Category
+    "Web Development" : 25
+    "AI/ML & Data Science" : 20
+    "Cloud Computing" : 15
+    "Mobile Development" : 12
+    "DevOps" : 10
+    "Cybersecurity" : 8
+    "Blockchain & Web3" : 6
+    "Computer Science" : 4
+```
+
+**Making tech education accessible to everyone, one resource at a time.**
+
+</div>
+
+---
+
+## 🗺️ Roadmap
+
+```mermaid
+gantt
+    title EduKit Africa Development Roadmap
+    dateFormat YYYY-MM
+    section Phase 1 - Foundation
+    Core Platform           :done, 2024-01, 2024-03
+    User Authentication     :done, 2024-02, 2024-03
+    Resource Management     :done, 2024-03, 2024-04
+    section Phase 2 - Enhancement
+    Advanced Search         :active, 2024-11, 2025-01
+    Analytics Dashboard     :active, 2024-12, 2025-02
+    Testing Infrastructure  :2024-12, 2025-01
+    section Phase 3 - Growth
+    Mobile App Development  :2025-01, 2025-04
+    API v2                  :2025-02, 2025-03
+    Internationalization    :2025-02, 2025-04
+    section Phase 4 - Innovation
+    AI Recommendations      :2025-04, 2025-06
+    Learning Paths          :2025-05, 2025-07
+    Community Features      :2025-06, 2025-08
+```
+
+### 🎯 Upcoming Features
+
+- 🔍 **Q1 2025**: Advanced search with AI-powered suggestions
+- 📊 **Q1 2025**: Comprehensive analytics dashboard
+- 🌐 **Q2 2025**: Multi-language support (French, Swahili, Arabic)
+- 📱 **Q2 2025**: Native mobile applications
+- 🎓 **Q2 2025**: Guided learning paths and certifications
+- 🤖 **Q3 2025**: AI-powered resource recommendations
+- 🎮 **Q3 2025**: Gamification and achievement system
 
 ## 🌟 Star History
 
 If you find this project useful, please consider giving it a star ⭐
 
+[![Star History Chart](https://api.star-history.com/svg?repos=lewiii254/EduKit-Africa&type=Date)](https://star-history.com/#lewiii254/EduKit-Africa&Date)
+
+---
+
+## 🎯 Good First Issues
+
+New to open source? Start here! We've curated a list of beginner-friendly issues:
+
+[![Good First Issues](https://img.shields.io/github/issues/lewiii254/EduKit-Africa/good%20first%20issue?color=7057ff&label=Good%20First%20Issues)](https://github.com/lewiii254/EduKit-Africa/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+### 🔰 Beginner-Friendly Tasks
+
+1. **Documentation**: Fix typos, improve clarity, add examples
+2. **UI Improvements**: Enhance button styles, improve spacing
+3. **Accessibility**: Add ARIA labels, improve keyboard navigation
+4. **Bug Fixes**: Simple bug fixes with clear reproduction steps
+5. **Testing**: Write tests for existing components
+
 ---
 
 <div align="center">
+
+## 💖 Support the Project
+
+If EduKit Africa has helped you, consider supporting us:
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-pink?style=for-the-badge&logo=github)](https://github.com/sponsors/lewiii254)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/edukitafrica)
+
+### Ways to Support
+- ⭐ Star this repository
+- 🐛 Report bugs and issues
+- 💡 Suggest new features
+- 🔀 Submit pull requests
+- 📢 Share with your network
+- 💰 Sponsor the project
+
+---
+
+  **Made with ❤️ in Africa for the World 🌍**
   
-  **Made with ❤️ in Africa by the Open Source Community**
+  **Open Source • Community Driven • Free Forever**
   
   [⬆ Back to Top](#-edukit-africa)
+  
+  ---
+  
+  <sub>Built by [lewiii254](https://github.com/lewiii254) and [contributors](https://github.com/lewiii254/EduKit-Africa/graphs/contributors)</sub>
   
 </div>
