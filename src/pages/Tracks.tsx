@@ -10,9 +10,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ITEMS_PER_PAGE = 12;
 
+interface Resource {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  category: string;
+  difficulty: string;
+  tags?: string[];
+  contributor_id: string;
+  created_at: string;
+}
+
 export default function Tracks() {
   const [searchParams] = useSearchParams();
-  const [resources, setResources] = useState<any[]>([]);
+  const [resources, setResources] = useState<Resource[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(
