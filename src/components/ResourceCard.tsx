@@ -33,38 +33,38 @@ export function ResourceCard({ resource }: ResourceCardProps) {
   const bookmarked = isBookmarked(resource.id);
 
   useEffect(() => {
+    const fetchRatings = async () => {
+      const { data, error } = await supabase
+        .from('ratings')
+        .select('rating')
+        .eq('resource_id', resource.id);
+
+      if (!error && data) {
+        setRatingsCount(data.length);
+        if (data.length > 0) {
+          const avg = data.reduce((acc, curr) => acc + curr.rating, 0) / data.length;
+          setAverageRating(avg);
+        }
+      }
+    };
+
+    const fetchContributor = async () => {
+      if (resource.contributor_id) {
+        const { data } = await supabase
+          .from('profiles')
+          .select('username')
+          .eq('id', resource.contributor_id)
+          .single();
+
+        if (data) {
+          setContributorName(data.username);
+        }
+      }
+    };
+
     fetchRatings();
     fetchContributor();
-  }, [resource.id]);
-
-  const fetchRatings = async () => {
-    const { data, error } = await supabase
-      .from('ratings')
-      .select('rating')
-      .eq('resource_id', resource.id);
-
-    if (!error && data) {
-      setRatingsCount(data.length);
-      if (data.length > 0) {
-        const avg = data.reduce((acc, curr) => acc + curr.rating, 0) / data.length;
-        setAverageRating(avg);
-      }
-    }
-  };
-
-  const fetchContributor = async () => {
-    if (resource.contributor_id) {
-      const { data } = await supabase
-        .from('profiles')
-        .select('username')
-        .eq('id', resource.contributor_id)
-        .single();
-
-      if (data) {
-        setContributorName(data.username);
-      }
-    }
-  };
+  }, [resource.id, resource.contributor_id]);
 
   const difficultyColors = {
     Beginner: 'bg-primary/10 text-primary border-primary/20',

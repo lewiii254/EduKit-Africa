@@ -6,10 +6,15 @@ import { seedResources, getResourceStats } from '@/utils/seedResources';
 import { Loader2, Database, CheckCircle, AlertCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
+interface ResourceStats {
+  totalResources: number;
+  resourcesByCategory: Record<string, number>;
+}
+
 export default function SeedDatabase() {
   const [isSeeding, setIsSeeding] = useState(false);
   const [result, setResult] = useState<{ success: boolean; message: string; count?: number } | null>(null);
-  const [stats, setStats] = useState<any>(null);
+  const [stats, setStats] = useState<ResourceStats | null>(null);
 
   const handleSeed = async () => {
     setIsSeeding(true);

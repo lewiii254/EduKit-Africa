@@ -9,8 +9,20 @@ import { supabase } from '@/integrations/supabase/client';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Github, Twitter, Linkedin, Users, BookOpen, Award, TrendingUp } from 'lucide-react';
 
+interface Resource {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  category: string;
+  difficulty: string;
+  tags?: string[];
+  contributor_id: string;
+  created_at: string;
+}
+
 export default function Index() {
-  const [topResources, setTopResources] = useState<any[]>([]);
+  const [topResources, setTopResources] = useState<Resource[]>([]);
   const [stats, setStats] = useState({
     totalResources: 0,
     totalContributors: 0,
