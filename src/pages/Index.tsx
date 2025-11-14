@@ -3,16 +3,23 @@ import { Hero } from '@/components/Hero';
 import { CategoryGrid } from '@/components/CategoryGrid';
 import { ResourceCard } from '@/components/ResourceCard';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Github, Twitter, Linkedin } from 'lucide-react';
+import { ArrowRight, Github, Twitter, Linkedin, Users, BookOpen, Award, TrendingUp } from 'lucide-react';
 
 export default function Index() {
   const [topResources, setTopResources] = useState<any[]>([]);
+  const [stats, setStats] = useState({
+    totalResources: 0,
+    totalContributors: 0,
+    categories: 8,
+  });
 
   useEffect(() => {
     fetchTopResources();
+    fetchStats();
   }, []);
 
   const fetchTopResources = async () => {
@@ -27,10 +34,58 @@ export default function Index() {
     }
   };
 
+  const fetchStats = async () => {
+    const { count: resourceCount } = await supabase
+      .from('resources')
+      .select('*', { count: 'exact', head: true });
+
+    const { data: contributors } = await supabase
+      .from('resources')
+      .select('contributor_id');
+
+    const uniqueContributors = new Set(contributors?.map(r => r.contributor_id).filter(Boolean));
+
+    setStats({
+      totalResources: resourceCount || 0,
+      totalContributors: uniqueContributors.size,
+      categories: 8,
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
+      
+      {/* Stats Section */}
+      <section className="py-16 container mx-auto px-4 -mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <Card className="border-2 hover:border-primary/50 transition-colors">
+            <CardContent className="pt-6 text-center">
+              <BookOpen className="h-10 w-10 text-primary mx-auto mb-3" />
+              <div className="text-3xl font-bold mb-1">{stats.totalResources}+</div>
+              <div className="text-muted-foreground">Learning Resources</div>
+            </CardContent>
+          </Card>
+          
+          <Card className="border-2 hover:border-primary/50 transition-colors">
+            <CardContent className="pt-6 text-center">
+              <Users className="h-10 w-10 text-primary mx-auto mb-3" />
+              <div className="text-3xl font-bold mb-1">{stats.totalContributors}+</div>
+              <div className="text-muted-foreground">Contributors</div>
+            </CardContent>
+          </Card>
+          
+          <Card className="border-2 hover:border-primary/50 transition-colors">
+            <CardContent className="pt-6 text-center">
+              <Award className="h-10 w-10 text-primary mx-auto mb-3" />
+              <div className="text-3xl font-bold mb-1">{stats.categories}</div>
+              <div className="text-muted-foreground">Tech Categories</div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       <CategoryGrid />
 
       {topResources.length > 0 && (
