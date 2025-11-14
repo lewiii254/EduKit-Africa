@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { ExternalLink, Star, User, Bookmark, Eye } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { RatingDialog } from './RatingDialog';
@@ -32,22 +32,22 @@ export function ResourceCard({ resource }: ResourceCardProps) {
   const [showRatingDialog, setShowRatingDialog] = useState(false);
   const bookmarked = isBookmarked(resource.id);
 
-  useEffect(() => {
-    const fetchRatings = async () => {
-      const { data, error } = await supabase
-        .from('ratings')
-        .select('rating')
-        .eq('resource_id', resource.id);
+  const fetchRatings = useCallback(async () => {
+    const { data, error } = await supabase
+      .from('ratings')
+      .select('rating')
+      .eq('resource_id', resource.id);
 
-      if (!error && data) {
-        setRatingsCount(data.length);
-        if (data.length > 0) {
-          const avg = data.reduce((acc, curr) => acc + curr.rating, 0) / data.length;
-          setAverageRating(avg);
-        }
+    if (!error && data) {
+      setRatingsCount(data.length);
+      if (data.length > 0) {
+        const avg = data.reduce((acc, curr) => acc + curr.rating, 0) / data.length;
+        setAverageRating(avg);
       }
-    };
+    }
+  }, [resource.id]);
 
+  useEffect(() => {
     const fetchContributor = async () => {
       if (resource.contributor_id) {
         const { data } = await supabase
@@ -64,7 +64,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
 
     fetchRatings();
     fetchContributor();
-  }, [resource.id, resource.contributor_id]);
+  }, [resource.id, resource.contributor_id, fetchRatings]);
 
   const difficultyColors = {
     Beginner: 'bg-primary/10 text-primary border-primary/20',
