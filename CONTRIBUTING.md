@@ -1,3 +1,4 @@
+
 # Contributing to EduKit Africa
 
 First off, thank you for considering contributing to EduKit Africa! 🎉 It's people like you that make EduKit Africa such a great platform for learning.
@@ -485,8 +486,8 @@ If applicable, add screenshots
 ## Questions?
 
 - Open an issue with the `question` label
-- Reach out on [Twitter](https://twitter.com/edukitafrica)
-- Email: contact@edukitafrica.org
+- Reach out on [Twitter](https://x.com/LewiiiTheG)
+- Email: ngondimarklewis@gmail.com
 
 ---
 
