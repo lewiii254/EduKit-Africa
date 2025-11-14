@@ -15,7 +15,7 @@
   ![GitHub stars](https://img.shields.io/github/stars/lewiii254/EduKit-Africa)
   ![GitHub issues](https://img.shields.io/github/issues/lewiii254/EduKit-Africa)
   
-  [🌐 Live Demo](https://edukit-africa.lovable.app) · [🐛 Report Bug](https://github.com/lewiii254/EduKit-Africa/issues) · [💡 Request Feature](https://github.com/lewiii254/EduKit-Africa/issues) · [🤝 Join Discord](#contact)
+  [🌐 Live Demo](https://afri-skill-forge.vercel.app) · [🐛 Report Bug](https://github.com/lewiii254/EduKit-Africa/issues) · [💡 Request Feature](https://github.com/lewiii254/EduKit-Africa/issues) · [🤝 Join Discord](#contact)
 </div>
 
 ---
@@ -513,7 +513,7 @@ We love contributions from the community! There are many ways to contribute to E
 
 #### 1. 📚 Contribute Learning Resources
 The easiest way to contribute is by sharing quality learning resources:
-- Visit the [Contribute page](https://edukit-africa.lovable.app/contribute) on our platform
+- Visit the [Contribute page](https://afri-skill-forge.vercel.app/contribute) on our platform
 - Sign in with your account
 - Choose the type of contribution:
   - **Learning Resources**: Tutorials, articles, courses, documentation
@@ -831,7 +831,7 @@ SOFTWARE.
 - UI components from [shadcn/ui](https://ui.shadcn.com)
 - Icons by [Lucide](https://lucide.dev)
 - Styling with [Tailwind CSS](https://tailwindcss.com)
-- Hosted on [Lovable](https://lovable.app)
+- Hosted on [Vercel](https://vercel.com)
 
 ### 💝 Special Thanks
 
