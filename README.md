@@ -1,6 +1,9 @@
 # 🎓 EduKit Africa
 
 <div align="center">
+  
+  ![Repo Views](https://komarev.com/ghpvc/?username=lewiii254-EduKit-Africa&label=EduKit-Africa+Views&color=blueviolet&style=for-the-badge)
+
   <img src="src/assets/hero-image.jpg" alt="EduKit Africa" width="600"/>
   
   **Open Source African Tech Learning Platform**
@@ -944,6 +947,8 @@ If EduKit Africa has helped you, consider supporting us:
 - 💰 Sponsor the project
 
 ---
+
+![Repo Views](https://komarev.com/ghpvc/?username=lewiii254-EduKit-Africa&label=EduKit-Africa+Views&color=blue&style=flat)
 
   **Made with ❤️ in Africa for the World 🌍**
   
