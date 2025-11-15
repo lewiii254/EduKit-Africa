@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Home } from 'lucide-react';
 import { z } from 'zod';
 
 const signUpSchema = z.object({
@@ -106,6 +106,14 @@ export default function Auth() {
             </span>
           </div>
           <p className="text-muted-foreground">Join our community of learners and contributors</p>
+          <div className="mt-4">
+            <Link to="/">
+              <Button variant="outline" size="sm">
+                <Home className="mr-2 h-4 w-4" />
+                Back to Home
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <Tabs defaultValue="signin" className="w-full">
