@@ -56,7 +56,7 @@ export default function Tracks() {
     const matchesSearch =
       resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      resource.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      (resource.tags || []).some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const matchesCategory =
       selectedCategory === 'All' || resource.category === selectedCategory;
