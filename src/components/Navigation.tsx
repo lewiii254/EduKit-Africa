@@ -13,8 +13,10 @@ export function Navigation() {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/tracks', label: 'Tracks' },
+    { to: '/learning-paths', label: 'Paths' },
     { to: '/youtube', label: 'YouTube' },
-    { to: '/free-certificates', label: 'Free Certificates' },
+    { to: '/free-certificates', label: 'Certificates' },
+    { to: '/analytics', label: 'Analytics' },
     { to: '/contribute', label: 'Contribute' },
     { to: '/about', label: 'About' },
     ...(user ? [{ to: '/dashboard', label: 'Dashboard' }] : []),
