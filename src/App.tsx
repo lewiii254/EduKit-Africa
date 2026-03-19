@@ -14,6 +14,8 @@ import NotFound from "./pages/NotFound";
 import SeedDatabase from "./pages/SeedDatabase";
 import YouTubeVideos from "./pages/YouTubeVideos";
 import FreeCertificates from "./pages/FreeCertificates";
+import LearningPaths from "./pages/LearningPaths";
+import Analytics from "./pages/Analytics";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
             <Route path="/tracks" element={<Tracks />} />
             <Route path="/youtube" element={<YouTubeVideos />} />
             <Route path="/free-certificates" element={<FreeCertificates />} />
+            <Route path="/learning-paths" element={<LearningPaths />} />
+            <Route path="/analytics" element={<Analytics />} />
             <Route path="/contribute" element={<Contribute />} />
             <Route path="/about" element={<About />} />
             <Route path="/dashboard" element={<Dashboard />} />
