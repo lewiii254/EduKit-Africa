@@ -658,6 +658,260 @@ export const freeCertificates: FreeCertificate[] = [
     level: "Beginner",
     region: "Africa",
     tags: ["Programming", "Africa", "Moringa", "Free"]
+  },
+
+  // Additional Cloud Certifications
+  {
+    name: "AWS Cloud Practitioner Essentials",
+    provider: "AWS Skill Builder",
+    description: "Free digital training course to prepare for the AWS Certified Cloud Practitioner exam with 6 hours of content.",
+    url: "https://explore.skillbuilder.aws/learn/course/134/aws-cloud-practitioner-essentials",
+    category: "Cloud",
+    level: "Beginner",
+    region: "Global",
+    tags: ["AWS", "Cloud", "Free", "Self-paced"]
+  },
+  {
+    name: "Google Cloud Skills Boost",
+    provider: "Google Cloud",
+    description: "Free labs and learning paths to build Google Cloud skills with hands-on labs and skill badges.",
+    url: "https://www.cloudskillsboost.google/",
+    category: "Cloud",
+    level: "Beginner",
+    region: "Global",
+    tags: ["GCP", "Labs", "Free", "Skill Badges"]
+  },
+  {
+    name: "Microsoft Azure Free Certifications",
+    provider: "Microsoft Learn",
+    description: "Free Azure learning paths and certification vouchers through Microsoft's free training challenges and events.",
+    url: "https://learn.microsoft.com/en-us/training/",
+    category: "Cloud",
+    level: "Beginner",
+    region: "Global",
+    tags: ["Azure", "Microsoft", "Free", "Learning Paths"]
+  },
+
+  // Additional AI/ML Certifications
+  {
+    name: "Machine Learning Crash Course",
+    provider: "Google",
+    description: "Google's fast-paced machine learning course featuring video lectures, real-world case studies, and hands-on practice exercises.",
+    url: "https://developers.google.com/machine-learning/crash-course",
+    category: "AI/ML",
+    level: "Beginner",
+    region: "Global",
+    tags: ["ML", "Google", "TensorFlow", "Free"]
+  },
+  {
+    name: "Deep Learning Specialization",
+    provider: "DeepLearning.AI (Coursera)",
+    description: "Andrew Ng's deep learning specialization covering neural networks, CNNs, RNNs, and sequence models.",
+    url: "https://www.coursera.org/specializations/deep-learning",
+    category: "AI/ML",
+    level: "Intermediate",
+    region: "Global",
+    tags: ["Deep Learning", "Neural Networks", "Andrew Ng", "Free Audit"]
+  },
+  {
+    name: "Generative AI Fundamentals",
+    provider: "Databricks",
+    description: "Free accredited course covering generative AI fundamentals, LLMs, prompt engineering, and responsible AI.",
+    url: "https://www.databricks.com/resources/learn/training/generative-ai-fundamentals",
+    category: "AI/ML",
+    level: "Beginner",
+    region: "Global",
+    tags: ["GenAI", "LLM", "Databricks", "Free Certificate"]
+  },
+  {
+    name: "Prompt Engineering for Everyone",
+    provider: "IBM SkillsBuild",
+    description: "Learn prompt engineering techniques to get better results from AI language models like ChatGPT and Claude.",
+    url: "https://www.ibm.com/training/course/prompt-engineering-for-everyone",
+    category: "AI/ML",
+    level: "Beginner",
+    region: "Global",
+    tags: ["Prompt Engineering", "ChatGPT", "IBM", "Free"]
+  },
+
+  // Additional Cybersecurity Certifications
+  {
+    name: "Introduction to Cybersecurity",
+    provider: "Cisco Networking Academy",
+    description: "Free course exploring the world of cybersecurity including threats, vulnerabilities, and basic defence strategies.",
+    url: "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
+    category: "Cybersecurity",
+    level: "Beginner",
+    region: "Global",
+    tags: ["Cybersecurity", "Cisco", "Free", "Beginner"]
+  },
+  {
+    name: "Cybersecurity Essentials",
+    provider: "Cisco Networking Academy",
+    description: "Develop foundational cybersecurity knowledge including threat defence, cryptography, and security controls.",
+    url: "https://www.netacad.com/courses/cybersecurity/cybersecurity-essentials",
+    category: "Cybersecurity",
+    level: "Beginner",
+    region: "Global",
+    tags: ["Cybersecurity", "Cisco", "Cryptography", "Free"]
+  },
+  {
+    name: "Google Cybersecurity Professional Certificate",
+    provider: "Google (Coursera)",
+    description: "Prepare for a career in cybersecurity with Google's professional certificate covering detection, response, and tools.",
+    url: "https://www.coursera.org/professional-certificates/google-cybersecurity",
+    category: "Cybersecurity",
+    level: "Beginner",
+    region: "Global",
+    tags: ["Google", "Cybersecurity", "Career", "Professional"]
+  },
+  {
+    name: "TryHackMe - Pre-Security Learning Path",
+    provider: "TryHackMe",
+    description: "Free beginner learning path covering networking, Linux, web fundamentals, and pre-security knowledge.",
+    url: "https://tryhackme.com/path/outline/presecurity",
+    category: "Cybersecurity",
+    level: "Beginner",
+    region: "Global",
+    tags: ["TryHackMe", "Hands-on", "Free", "Beginner"]
+  },
+
+  // Additional Web Development Certifications
+  {
+    name: "Responsive Web Design",
+    provider: "FreeCodeCamp",
+    description: "Learn HTML and CSS by building 20 projects and earn a free verified certificate upon completion.",
+    url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+    category: "Web Development",
+    level: "Beginner",
+    region: "Global",
+    tags: ["HTML", "CSS", "Responsive", "Free Certificate"]
+  },
+  {
+    name: "JavaScript Algorithms and Data Structures",
+    provider: "FreeCodeCamp",
+    description: "Learn JavaScript fundamentals, ES6, OOP, and functional programming with a free certificate on completion.",
+    url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+    category: "Web Development",
+    level: "Beginner",
+    region: "Global",
+    tags: ["JavaScript", "Algorithms", "Free Certificate", "ES6"]
+  },
+  {
+    name: "Front End Libraries",
+    provider: "FreeCodeCamp",
+    description: "Learn Bootstrap, jQuery, Sass, React, and Redux with hands-on projects and a free verified certificate.",
+    url: "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+    category: "Web Development",
+    level: "Intermediate",
+    region: "Global",
+    tags: ["React", "Bootstrap", "Redux", "Free Certificate"]
+  },
+
+  // Additional Data Science
+  {
+    name: "Applied Data Science with Python Specialization",
+    provider: "University of Michigan (Coursera)",
+    description: "Learn applied data science techniques using Python libraries: Pandas, Matplotlib, Scikit-learn, NLTK, and NetworkX.",
+    url: "https://www.coursera.org/specializations/data-science-python",
+    category: "Data Science",
+    level: "Intermediate",
+    region: "Global",
+    tags: ["Python", "Data Science", "Pandas", "Free Audit"]
+  },
+  {
+    name: "Data Science Methodology",
+    provider: "IBM (Coursera)",
+    description: "Learn the structured data science methodology from problem formulation to deployment with IBM's framework.",
+    url: "https://www.coursera.org/learn/data-science-methodology",
+    category: "Data Science",
+    level: "Beginner",
+    region: "Global",
+    tags: ["Data Science", "IBM", "Methodology", "Free Audit"]
+  },
+  {
+    name: "SQL for Data Science",
+    provider: "University of California Davis (Coursera)",
+    description: "Learn SQL for data science including queries, filtering, joining, subqueries, and data analysis patterns.",
+    url: "https://www.coursera.org/learn/sql-for-data-science",
+    category: "Data Science",
+    level: "Beginner",
+    region: "Global",
+    tags: ["SQL", "Data Science", "Database", "Free Audit"]
+  },
+
+  // Additional Programming
+  {
+    name: "CS50's Introduction to Programming with Python",
+    provider: "Harvard University (edX)",
+    description: "Harvard's introduction to programming using Python covering functions, conditionals, loops, OOP, and more.",
+    url: "https://cs50.harvard.edu/python/",
+    category: "Programming",
+    level: "Beginner",
+    region: "Global",
+    tags: ["Python", "Harvard", "CS50", "Free"]
+  },
+  {
+    name: "C Programming Language Course",
+    provider: "FreeCodeCamp / YouTube",
+    description: "Complete C programming language course covering pointers, memory management, data structures, and algorithms.",
+    url: "https://www.youtube.com/watch?v=KJgsSFOSQv0",
+    category: "Programming",
+    level: "Beginner",
+    region: "Global",
+    tags: ["C", "Systems Programming", "Free", "YouTube"]
+  },
+  {
+    name: "Go (Golang) Full Course",
+    provider: "FreeCodeCamp",
+    description: "Learn the Go programming language from scratch covering goroutines, channels, interfaces, and web development.",
+    url: "https://www.youtube.com/watch?v=un6ZyFkqFKo",
+    category: "Programming",
+    level: "Intermediate",
+    region: "Global",
+    tags: ["Go", "Golang", "Concurrency", "Free"]
+  },
+
+  // Africa-Specific
+  {
+    name: "Andela Learning Community",
+    provider: "Andela",
+    description: "Free tech training and community for African developers covering software engineering and cloud technologies.",
+    url: "https://www.andela.com/alc/",
+    category: "Programming",
+    level: "Beginner",
+    region: "Africa",
+    tags: ["Africa", "Andela", "Software Engineering", "Community"]
+  },
+  {
+    name: "Ajira Digital Programme",
+    provider: "Kenya ICT Authority",
+    description: "Kenya government initiative providing free digital skills training for youth in freelancing and online work.",
+    url: "https://ajiradigital.go.ke/",
+    category: "Others",
+    level: "Beginner",
+    region: "Kenya",
+    tags: ["Kenya", "Digital Skills", "Freelancing", "Free"]
+  },
+  {
+    name: "GDG Africa Learning Resources",
+    provider: "Google Developer Groups",
+    description: "Free learning resources, workshops, and study jams from Google Developer Groups across Africa.",
+    url: "https://gdg.community.dev/",
+    category: "Others",
+    level: "Beginner",
+    region: "Africa",
+    tags: ["Google", "Africa", "Community", "Free"]
+  },
+  {
+    name: "Microsoft Africa Development Centre Training",
+    provider: "Microsoft",
+    description: "Free technical training resources from Microsoft's Africa Development Centre for African tech professionals.",
+    url: "https://www.microsoft.com/en-us/africa/",
+    category: "Cloud",
+    level: "Beginner",
+    region: "Africa",
+    tags: ["Microsoft", "Africa", "Azure", "Free"]
   }
 ];
 
