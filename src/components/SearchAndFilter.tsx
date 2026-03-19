@@ -23,6 +23,12 @@ export const CATEGORIES = [
   'Mobile Development',
   'DevOps',
   'Cybersecurity',
+  'Data Engineering',
+  'Game Development',
+  'UI/UX Design',
+  'Internet of Things',
+  'Quantum Computing',
+  'Open Source',
 ];
 
 export const DIFFICULTIES = ['All', 'Beginner', 'Intermediate', 'Advanced'];

@@ -109,7 +109,7 @@ export function CategoryGrid() {
                 <Card className="h-full hover:shadow-hover transition-all duration-300 cursor-pointer group">
                   <CardHeader>
                     <div className="mb-2">
-                      <Icon className={`h-8 w-8 ${category.color} group-hover:scale-110 transition-transform`} />
+                      <Icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
                     </div>
                     <CardTitle className="text-lg">{category.name}</CardTitle>
                     <CardDescription>{category.description}</CardDescription>
