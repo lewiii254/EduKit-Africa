@@ -17,8 +17,8 @@ interface ResourceCardProps {
     link: string;
     category: string;
     difficulty: string;
-    tags: string[];
-    contributor_id: string;
+    tags?: string[] | null;
+    contributor_id?: string | null;
     created_at: string;
     view_count?: number;
   };
