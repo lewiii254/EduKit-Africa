@@ -57,10 +57,15 @@ export default function Index() {
 
     const uniqueContributors = new Set(contributors?.map(r => r.contributor_id).filter(Boolean));
 
+    const { data: catData } = await supabase
+      .from('resources')
+      .select('category');
+    const uniqueCategories = new Set(catData?.map(r => r.category));
+
     setStats({
       totalResources: resourceCount || 0,
       totalContributors: uniqueContributors.size,
-      categories: 8,
+      categories: uniqueCategories.size || 14,
     });
   };
 
