@@ -17,8 +17,8 @@ interface ResourceCardProps {
     link: string;
     category: string;
     difficulty: string;
-    tags: string[];
-    contributor_id: string;
+    tags?: string[] | null;
+    contributor_id?: string | null;
     created_at: string;
     view_count?: number;
   };
@@ -90,7 +90,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
           <div className="space-y-3">
             <Badge variant="outline">{resource.category}</Badge>
             
-            {resource.tags.length > 0 && (
+            {resource.tags && resource.tags.length > 0 && (
               <div className="flex flex-wrap gap-1">
                 {resource.tags.slice(0, 3).map((tag) => (
                   <Badge key={tag} variant="secondary" className="text-xs">

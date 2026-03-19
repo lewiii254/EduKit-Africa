@@ -7,8 +7,9 @@ import { Loader2, Database, CheckCircle, AlertCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface ResourceStats {
-  totalResources: number;
-  resourcesByCategory: Record<string, number>;
+  total: number;
+  byCategory: Record<string, number>;
+  byDifficulty: Record<string, number>;
 }
 
 export default function SeedDatabase() {

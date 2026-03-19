@@ -56,7 +56,7 @@ export default function Tracks() {
     const matchesSearch =
       resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      resource.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      (resource.tags || []).some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const matchesCategory =
       selectedCategory === 'All' || resource.category === selectedCategory;
@@ -80,7 +80,7 @@ export default function Tracks() {
       case 'oldest':
         return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
       case 'popular':
-        return (b.view_count || 0) - (a.view_count || 0);
+        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
       case 'rating':
         // This would require fetching ratings - for now just return by date
         return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();

@@ -57,10 +57,15 @@ export default function Index() {
 
     const uniqueContributors = new Set(contributors?.map(r => r.contributor_id).filter(Boolean));
 
+    const { data: catData } = await supabase
+      .from('resources')
+      .select('category');
+    const uniqueCategories = new Set(catData?.map(r => r.category));
+
     setStats({
       totalResources: resourceCount || 0,
       totalContributors: uniqueContributors.size,
-      categories: 8,
+      categories: uniqueCategories.size || 14,
     });
   };
 
@@ -100,6 +105,26 @@ export default function Index() {
             </CardContent>
           </Card>
         </div>
+      </section>
+
+      {/* Learning Paths CTA */}
+      <section className="py-16 container mx-auto px-4">
+        <Card className="bg-hero-gradient text-primary-foreground overflow-hidden">
+          <CardContent className="p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Follow a Learning Path</h2>
+              <p className="text-primary-foreground/80 max-w-lg">
+                Structured roadmaps designed to take you from beginner to proficient. Track your progress and master new tech skills.
+              </p>
+            </div>
+            <Link to="/learning-paths">
+              <Button size="lg" variant="secondary" className="whitespace-nowrap">
+                Explore Paths
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
       </section>
 
       <CategoryGrid />
