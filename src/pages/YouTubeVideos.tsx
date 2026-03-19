@@ -311,6 +311,188 @@ const youtubeChannels: YouTubeChannel[] = [
     category: "Cybersecurity",
     tags: ["HackTheBox", "pentesting", "walkthroughs", "CTF"],
     subscribers: "400K+"
+  },
+  {
+    name: "LiveOverflow",
+    description: "Advanced cybersecurity and CTF challenge walkthroughs with deep dives into binary exploitation and reverse engineering.",
+    url: "https://www.youtube.com/@LiveOverflow",
+    category: "Cybersecurity",
+    tags: ["CTF", "binary-exploitation", "reverse-engineering", "advanced"],
+    subscribers: "300K+"
+  },
+  {
+    name: "Professor Messer",
+    description: "Free CompTIA certification training videos for Security+, Network+, A+, and other IT certifications.",
+    url: "https://www.youtube.com/@professormesser",
+    category: "Cybersecurity",
+    tags: ["CompTIA", "certification", "Security+", "free"],
+    subscribers: "400K+"
+  },
+
+  // Additional Web Development
+  {
+    name: "Codevolution",
+    description: "Web development tutorials focused on React, TypeScript, Next.js, Angular, and modern JavaScript frameworks.",
+    url: "https://www.youtube.com/@Codevolution",
+    category: "Web Development",
+    tags: ["React", "TypeScript", "Next.js", "Angular"],
+    subscribers: "500K+"
+  },
+  {
+    name: "Academind",
+    description: "In-depth web development courses on React, Node.js, Angular, and full-stack development by Maximilian Schwarzmüller.",
+    url: "https://www.youtube.com/@academind",
+    category: "Web Development",
+    tags: ["React", "Node.js", "Angular", "full-stack"],
+    subscribers: "1M+"
+  },
+  {
+    name: "DesignCourse",
+    description: "UI/UX design and frontend development tutorials covering CSS, Figma, design systems, and modern web design.",
+    url: "https://www.youtube.com/@DesignCourse",
+    category: "Web Development",
+    tags: ["UI/UX", "CSS", "Figma", "design"],
+    subscribers: "1M+"
+  },
+  {
+    name: "Ben Awad",
+    description: "Full-stack development tutorials covering React, GraphQL, TypeScript, PostgreSQL, and software engineering tips.",
+    url: "https://www.youtube.com/@bawad",
+    category: "Web Development",
+    tags: ["React", "GraphQL", "TypeScript", "full-stack"],
+    subscribers: "500K+"
+  },
+
+  // Additional AI/ML
+  {
+    name: "Andrej Karpathy",
+    description: "Deep insights into neural networks, large language models, and AI from a former OpenAI and Tesla AI director.",
+    url: "https://www.youtube.com/@AndrejKarpathy",
+    category: "AI/ML & Data Science",
+    tags: ["LLM", "neural-networks", "AI", "deep-learning"],
+    subscribers: "500K+"
+  },
+  {
+    name: "Yannic Kilcher",
+    description: "In-depth paper reviews and explanations of the latest AI and machine learning research from top conferences.",
+    url: "https://www.youtube.com/@YannicKilcher",
+    category: "AI/ML & Data Science",
+    tags: ["AI-research", "papers", "deep-learning", "NLP"],
+    subscribers: "200K+"
+  },
+  {
+    name: "AI Explained",
+    description: "Clear explanations of AI breakthroughs, frontier models, and the latest developments in artificial intelligence.",
+    url: "https://www.youtube.com/@aiexplained-official",
+    category: "AI/ML & Data Science",
+    tags: ["AI", "GPT", "frontier-models", "news"],
+    subscribers: "200K+"
+  },
+
+  // Additional Computer Science
+  {
+    name: "Reducible",
+    description: "Visual and intuitive explanations of complex computer science topics, algorithms, and theoretical concepts.",
+    url: "https://www.youtube.com/@Reducible",
+    category: "Computer Science",
+    tags: ["algorithms", "visualization", "theory", "CS"],
+    subscribers: "400K+"
+  },
+  {
+    name: "NeetCode",
+    description: "LeetCode problem solutions with clear explanations of data structures, algorithms, and coding interview preparation.",
+    url: "https://www.youtube.com/@NeetCode",
+    category: "Computer Science",
+    tags: ["LeetCode", "algorithms", "interviews", "data-structures"],
+    subscribers: "600K+"
+  },
+  {
+    name: "Theo - t3.gg",
+    description: "Modern web development, TypeScript, and full-stack development with React, Next.js, and the T3 stack.",
+    url: "https://www.youtube.com/@t3dotgg",
+    category: "Web Development",
+    tags: ["TypeScript", "Next.js", "T3-stack", "fullstack"],
+    subscribers: "200K+"
+  },
+
+  // Additional DevOps
+  {
+    name: "That DevOps Guy",
+    description: "Practical DevOps tutorials on Kubernetes, Helm, GitOps, Argo CD, and cloud-native technologies.",
+    url: "https://www.youtube.com/@MarcelDempers",
+    category: "DevOps",
+    tags: ["Kubernetes", "GitOps", "Helm", "cloud-native"],
+    subscribers: "100K+"
+  },
+  {
+    name: "KodeKloud",
+    description: "Hands-on DevOps and cloud training covering Kubernetes, Docker, CI/CD, Ansible, and certification prep.",
+    url: "https://www.youtube.com/@KodeKloud",
+    category: "DevOps",
+    tags: ["Kubernetes", "Docker", "certification", "hands-on"],
+    subscribers: "300K+"
+  },
+  {
+    name: "Anton Putra",
+    description: "AWS, Kubernetes, and infrastructure-as-code tutorials with real-world production scenarios and best practices.",
+    url: "https://www.youtube.com/@AntonPutra",
+    category: "DevOps",
+    tags: ["AWS", "Kubernetes", "IaC", "production"],
+    subscribers: "50K+"
+  },
+
+  // Additional Cloud Computing
+  {
+    name: "Cloud With Raj",
+    description: "Cloud computing tutorials for AWS, Azure, and GCP with hands-on labs and certification preparation guides.",
+    url: "https://www.youtube.com/@CloudWithRaj",
+    category: "Cloud Computing",
+    tags: ["AWS", "Azure", "GCP", "certification"],
+    subscribers: "100K+"
+  },
+  {
+    name: "Be A Better Dev",
+    description: "AWS tutorials with practical examples covering serverless, Lambda, DynamoDB, and cloud architecture patterns.",
+    url: "https://www.youtube.com/@BeABetterDev",
+    category: "Cloud Computing",
+    tags: ["AWS", "serverless", "Lambda", "architecture"],
+    subscribers: "100K+"
+  },
+
+  // Additional Mobile Development
+  {
+    name: "Coding with T",
+    description: "Flutter and Dart mobile app development tutorials with clean architecture and state management patterns.",
+    url: "https://www.youtube.com/@CodingwithT",
+    category: "Mobile Development",
+    tags: ["Flutter", "Dart", "clean-architecture", "state-management"],
+    subscribers: "100K+"
+  },
+  {
+    name: "William Candillon",
+    description: "Advanced React Native and Skia animations, gestures, and high-performance mobile UI development.",
+    url: "https://www.youtube.com/@wcandillon",
+    category: "Mobile Development",
+    tags: ["React-Native", "animations", "Skia", "advanced"],
+    subscribers: "100K+"
+  },
+
+  // Additional Blockchain
+  {
+    name: "Moralis Web3",
+    description: "Web3 development tutorials covering Solidity, smart contracts, NFTs, DeFi, and full-stack dApp development.",
+    url: "https://www.youtube.com/@MoralisWeb3",
+    category: "Blockchain & Web3",
+    tags: ["Web3", "Solidity", "NFT", "dApps"],
+    subscribers: "300K+"
+  },
+  {
+    name: "Smart Contract Programmer",
+    description: "In-depth Solidity and DeFi tutorials covering smart contract security, design patterns, and DeFi protocols.",
+    url: "https://www.youtube.com/@smartcontractprogrammer",
+    category: "Blockchain & Web3",
+    tags: ["Solidity", "DeFi", "security", "smart-contracts"],
+    subscribers: "100K+"
   }
 ];
 

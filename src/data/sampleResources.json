@@ -916,5 +916,418 @@
     "difficulty": "Intermediate",
     "tags": ["blue-team", "defense", "SOC", "incident-response"],
     "contributor_id": null
+  },
+
+  {
+    "title": "Ethical Hacking Full Course - freeCodeCamp",
+    "description": "A complete 15-hour ethical hacking course on YouTube covering reconnaissance, scanning, exploitation, and post-exploitation techniques.",
+    "link": "https://www.youtube.com/watch?v=3Kq1MIfTWCE",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["ethical-hacking", "pentesting", "youtube", "full-course"],
+    "contributor_id": null
+  },
+  {
+    "title": "TryHackMe - Learn Cybersecurity",
+    "description": "Hands-on cybersecurity training platform with guided learning paths for complete beginners to advanced practitioners.",
+    "link": "https://tryhackme.com/",
+    "category": "Cybersecurity",
+    "difficulty": "Beginner",
+    "tags": ["labs", "CTF", "guided-paths", "beginner-friendly"],
+    "contributor_id": null
+  },
+  {
+    "title": "Malware Analysis - Full Course",
+    "description": "Learn reverse engineering and malware analysis techniques including static and dynamic analysis of malicious software.",
+    "link": "https://www.youtube.com/watch?v=qA0YcYMRWyI",
+    "category": "Cybersecurity",
+    "difficulty": "Advanced",
+    "tags": ["malware", "reverse-engineering", "youtube", "analysis"],
+    "contributor_id": null
+  },
+  {
+    "title": "Hack The Box Academy",
+    "description": "Structured cybersecurity learning paths with hands-on labs covering offensive and defensive security techniques.",
+    "link": "https://academy.hackthebox.com/",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["labs", "pentesting", "offensive-security", "structured"],
+    "contributor_id": null
+  },
+  {
+    "title": "Network Security Full Course - Simplilearn",
+    "description": "Comprehensive network security tutorial covering firewalls, VPNs, IDS/IPS, and network monitoring techniques.",
+    "link": "https://www.youtube.com/watch?v=E03gh1iV7CM",
+    "category": "Cybersecurity",
+    "difficulty": "Intermediate",
+    "tags": ["network-security", "firewalls", "VPN", "youtube"],
+    "contributor_id": null
+  },
+
+  {
+    "title": "Next.js Full Course for Beginners",
+    "description": "Complete Next.js tutorial covering server-side rendering, API routes, static site generation, and deployment.",
+    "link": "https://www.youtube.com/watch?v=wm5gMKuwSYk",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["Next.js", "React", "SSR", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "TypeScript Full Course - freeCodeCamp",
+    "description": "Learn TypeScript from scratch with this comprehensive course covering types, interfaces, generics, and advanced patterns.",
+    "link": "https://www.youtube.com/watch?v=30LWjhZzg50",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["TypeScript", "JavaScript", "youtube", "types"],
+    "contributor_id": null
+  },
+  {
+    "title": "Full Stack Web Development Bootcamp",
+    "description": "Angela Yu's complete web development bootcamp on Udemy covering HTML, CSS, JavaScript, Node.js, React, and databases.",
+    "link": "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["full-stack", "bootcamp", "Node.js", "React"],
+    "contributor_id": null
+  },
+  {
+    "title": "GraphQL Full Course - Novice to Expert",
+    "description": "Learn GraphQL from the ground up including queries, mutations, subscriptions, and building APIs with Apollo.",
+    "link": "https://www.youtube.com/watch?v=ed8SzALpx1Q",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["GraphQL", "Apollo", "API", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Tailwind CSS Full Course",
+    "description": "Master Tailwind CSS utility-first framework for building modern responsive user interfaces quickly.",
+    "link": "https://www.youtube.com/watch?v=ft30zcMlFa8",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "tags": ["Tailwind", "CSS", "responsive", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Django REST Framework - Full Course",
+    "description": "Build powerful REST APIs with Django and Django REST Framework including authentication, serialization, and permissions.",
+    "link": "https://www.youtube.com/watch?v=c708Nf0cHrs",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["Django", "REST", "Python", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Vue.js 3 Full Course",
+    "description": "Learn Vue.js 3 Composition API from scratch to build modern reactive user interfaces and single-page applications.",
+    "link": "https://www.youtube.com/watch?v=VeNfHj6MhgA",
+    "category": "Web Development",
+    "difficulty": "Intermediate",
+    "tags": ["Vue.js", "JavaScript", "frontend", "youtube"],
+    "contributor_id": null
+  },
+
+  {
+    "title": "AWS Solutions Architect Associate - Full Course",
+    "description": "Complete preparation for AWS SAA-C03 certification covering EC2, S3, RDS, VPC, Lambda, and more cloud services.",
+    "link": "https://www.youtube.com/watch?v=Ia-UEYYR44s",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["AWS", "certification", "youtube", "solutions-architect"],
+    "contributor_id": null
+  },
+  {
+    "title": "Microsoft Azure Fundamentals - Full Course",
+    "description": "Learn Azure cloud computing concepts for the AZ-900 certification exam including compute, storage, and networking.",
+    "link": "https://www.youtube.com/watch?v=NKEFWyqJ5XA",
+    "category": "Cloud Computing",
+    "difficulty": "Beginner",
+    "tags": ["Azure", "Microsoft", "certification", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Terraform Full Course for Beginners",
+    "description": "Learn infrastructure as code with Terraform to provision and manage cloud resources on AWS, Azure, and GCP.",
+    "link": "https://www.youtube.com/watch?v=SLB_c_ayRMo",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["Terraform", "IaC", "DevOps", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Serverless Computing with AWS Lambda",
+    "description": "Build serverless applications using AWS Lambda, API Gateway, DynamoDB, and other serverless services.",
+    "link": "https://www.youtube.com/watch?v=eOBq__h4OJ4",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["serverless", "Lambda", "AWS", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Google Cloud Platform Associate Cloud Engineer",
+    "description": "Prepare for GCP ACE certification with hands-on labs on Compute Engine, GKE, Cloud Storage, and Networking.",
+    "link": "https://www.cloudskillsboost.google/paths/11",
+    "category": "Cloud Computing",
+    "difficulty": "Intermediate",
+    "tags": ["GCP", "certification", "Kubernetes", "compute"],
+    "contributor_id": null
+  },
+  {
+    "title": "Cloud Computing Fundamentals - IBM",
+    "description": "IBM's free course on cloud fundamentals covering cloud models, services, deployment, and security best practices.",
+    "link": "https://www.edx.org/course/introduction-to-cloud-computing",
+    "category": "Cloud Computing",
+    "difficulty": "Beginner",
+    "tags": ["cloud", "IBM", "fundamentals", "free"],
+    "contributor_id": null
+  },
+
+  {
+    "title": "Machine Learning Specialization - Andrew Ng",
+    "description": "Stanford University's updated machine learning course by Andrew Ng covering supervised learning, neural networks, and best practices.",
+    "link": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["ML", "supervised-learning", "neural-networks", "Andrew-Ng"],
+    "contributor_id": null
+  },
+  {
+    "title": "Python for Data Science - Full Course",
+    "description": "Complete Python data science course covering NumPy, Pandas, Matplotlib, Seaborn, and Scikit-learn with real datasets.",
+    "link": "https://www.youtube.com/watch?v=LHBE6Q9XlzI",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["Python", "Pandas", "NumPy", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "LangChain & LLM Applications - Full Course",
+    "description": "Build large language model applications using LangChain, OpenAI, and vector databases for RAG pipelines.",
+    "link": "https://www.youtube.com/watch?v=HSZ_uaif57o",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Advanced",
+    "tags": ["LangChain", "LLM", "GenAI", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Hugging Face NLP Course",
+    "description": "Free open-source NLP course using Hugging Face Transformers library with hands-on fine-tuning and model deployment.",
+    "link": "https://huggingface.co/learn/nlp-course",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["NLP", "transformers", "Hugging-Face", "free"],
+    "contributor_id": null
+  },
+  {
+    "title": "PyTorch for Deep Learning - Full Course",
+    "description": "Comprehensive PyTorch deep learning course covering neural networks, CNNs, RNNs, and modern architectures.",
+    "link": "https://www.youtube.com/watch?v=V_xro1bcAuA",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Intermediate",
+    "tags": ["PyTorch", "deep-learning", "CNN", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Data Analysis with Python - freeCodeCamp",
+    "description": "Learn data analysis with Python through Jupyter notebooks, Pandas, NumPy, and data visualization libraries.",
+    "link": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["Python", "data-analysis", "Pandas", "free"],
+    "contributor_id": null
+  },
+  {
+    "title": "Kaggle Learn - Free Data Science Courses",
+    "description": "Bite-sized, interactive data science courses on Python, machine learning, data visualization, and SQL by Kaggle.",
+    "link": "https://www.kaggle.com/learn",
+    "category": "AI/ML & Data Science",
+    "difficulty": "Beginner",
+    "tags": ["data-science", "Python", "ML", "interactive"],
+    "contributor_id": null
+  },
+
+  {
+    "title": "Android Development with Kotlin - Full Course",
+    "description": "Learn modern Android app development with Kotlin, Jetpack Compose, MVVM architecture, and Android Studio.",
+    "link": "https://www.youtube.com/watch?v=BCSlZIUj18Y",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Android", "Kotlin", "Jetpack-Compose", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Flutter & Dart - Full Course for Beginners",
+    "description": "Build iOS and Android apps with Flutter and Dart from scratch including state management with Bloc and Provider.",
+    "link": "https://www.youtube.com/watch?v=VPvVD8t02U8",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Flutter", "Dart", "cross-platform", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "React Native - The Practical Guide",
+    "description": "Build cross-platform iOS and Android apps with React Native, Expo, and native device features.",
+    "link": "https://www.udemy.com/course/react-native-the-practical-guide/",
+    "category": "Mobile Development",
+    "difficulty": "Intermediate",
+    "tags": ["React-Native", "Expo", "JavaScript", "cross-platform"],
+    "contributor_id": null
+  },
+  {
+    "title": "Swift and iOS Development Bootcamp",
+    "description": "Build iOS apps from scratch with Swift, SwiftUI, and UIKit. Deploy apps to the App Store.",
+    "link": "https://www.youtube.com/watch?v=comQ1-x2a1Q",
+    "category": "Mobile Development",
+    "difficulty": "Beginner",
+    "tags": ["Swift", "iOS", "SwiftUI", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Mobile App Security Testing Guide",
+    "description": "OWASP guide for testing mobile application security on iOS and Android platforms with practical testing techniques.",
+    "link": "https://mas.owasp.org/MASTG/",
+    "category": "Mobile Development",
+    "difficulty": "Advanced",
+    "tags": ["security", "OWASP", "Android", "iOS"],
+    "contributor_id": null
+  },
+
+  {
+    "title": "DevOps Roadmap - Full Course 2024",
+    "description": "Complete DevOps roadmap covering Linux, Git, Docker, Kubernetes, CI/CD, monitoring, and cloud deployment.",
+    "link": "https://www.youtube.com/watch?v=9pZ2xmsSDdo",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "tags": ["DevOps", "roadmap", "Docker", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "GitHub Actions - Full Course",
+    "description": "Learn GitHub Actions for CI/CD pipelines, automation workflows, and deploying applications to cloud providers.",
+    "link": "https://www.youtube.com/watch?v=R8_veQiYBjI",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["GitHub-Actions", "CI-CD", "automation", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Kubernetes Full Course - KodeKloud",
+    "description": "Hands-on Kubernetes course covering pods, deployments, services, ingress, Helm, and production best practices.",
+    "link": "https://www.youtube.com/watch?v=XuSQU5Grv1g",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Kubernetes", "containers", "orchestration", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Ansible Full Course - Beginner to Advanced",
+    "description": "Learn Ansible automation for configuration management, application deployment, and infrastructure provisioning.",
+    "link": "https://www.youtube.com/watch?v=3RiVKs8GHYQ",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Ansible", "automation", "configuration-management", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Prometheus and Grafana - Monitoring Stack",
+    "description": "Set up complete monitoring and observability with Prometheus metrics collection and Grafana dashboards.",
+    "link": "https://www.youtube.com/watch?v=h4Sl21AKiDg",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "tags": ["Prometheus", "Grafana", "monitoring", "youtube"],
+    "contributor_id": null
+  },
+
+  {
+    "title": "Solidity Full Course - Smart Contract Development",
+    "description": "Complete Solidity programming course for building Ethereum smart contracts, DeFi protocols, and NFT projects.",
+    "link": "https://www.youtube.com/watch?v=ipwxYa-F1uY",
+    "category": "Blockchain & Web3",
+    "difficulty": "Intermediate",
+    "tags": ["Solidity", "Ethereum", "smart-contracts", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Web3.js Full Tutorial - Blockchain Development",
+    "description": "Learn Web3.js to interact with Ethereum blockchain, smart contracts, and decentralized applications from a browser.",
+    "link": "https://www.youtube.com/watch?v=t3wM5903ty0",
+    "category": "Blockchain & Web3",
+    "difficulty": "Intermediate",
+    "tags": ["Web3.js", "Ethereum", "JavaScript", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "DeFi Deep Dive - Decentralized Finance Explained",
+    "description": "Comprehensive guide to decentralized finance covering AMMs, lending protocols, yield farming, and liquidity pools.",
+    "link": "https://www.youtube.com/watch?v=k9HYC0EJU6E",
+    "category": "Blockchain & Web3",
+    "difficulty": "Intermediate",
+    "tags": ["DeFi", "AMM", "yield-farming", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Foundry - Ethereum Smart Contract Development",
+    "description": "Learn Foundry, the modern toolkit for Ethereum development with fast compilation, testing, and deployment.",
+    "link": "https://www.youtube.com/watch?v=eoQJ6nFZOcs",
+    "category": "Blockchain & Web3",
+    "difficulty": "Advanced",
+    "tags": ["Foundry", "Ethereum", "testing", "youtube"],
+    "contributor_id": null
+  },
+
+  {
+    "title": "System Design Interview - Full Course",
+    "description": "Comprehensive system design course covering scalable architectures, databases, caching, load balancing, and distributed systems.",
+    "link": "https://www.youtube.com/watch?v=i53Gi_K3o7I",
+    "category": "Computer Science",
+    "difficulty": "Advanced",
+    "tags": ["system-design", "architecture", "scalability", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Python Programming - Full Course for Beginners",
+    "description": "Learn Python programming from scratch covering syntax, data types, functions, OOP, file handling, and standard libraries.",
+    "link": "https://www.youtube.com/watch?v=_uQrJ0TkZlc",
+    "category": "Computer Science",
+    "difficulty": "Beginner",
+    "tags": ["Python", "programming", "OOP", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Competitive Programming - Full Course",
+    "description": "Master competitive programming with algorithms, dynamic programming, graph algorithms, and problem-solving strategies.",
+    "link": "https://www.youtube.com/watch?v=bVKHRtafgPc",
+    "category": "Computer Science",
+    "difficulty": "Advanced",
+    "tags": ["competitive-programming", "algorithms", "problem-solving", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Design Patterns in Object-Oriented Programming",
+    "description": "Learn the 23 Gang of Four design patterns with real-world examples in Java and Python.",
+    "link": "https://www.youtube.com/watch?v=v9ejT8FO-7I",
+    "category": "Computer Science",
+    "difficulty": "Intermediate",
+    "tags": ["design-patterns", "OOP", "Java", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "Rust Programming Language - Full Course",
+    "description": "Learn Rust systems programming language from the ground up covering ownership, borrowing, lifetimes, and concurrency.",
+    "link": "https://www.youtube.com/watch?v=ygL_xcavzQ4",
+    "category": "Computer Science",
+    "difficulty": "Intermediate",
+    "tags": ["Rust", "systems-programming", "memory-safety", "youtube"],
+    "contributor_id": null
+  },
+  {
+    "title": "ALX Software Engineering Programme",
+    "description": "Africa-focused intensive software engineering training program by ALX covering C, Python, JavaScript, and DevOps.",
+    "link": "https://www.alxafrica.com/software-engineering/",
+    "category": "Computer Science",
+    "difficulty": "Beginner",
+    "tags": ["Africa", "ALX", "software-engineering", "C"],
+    "contributor_id": null
   }
 ]
