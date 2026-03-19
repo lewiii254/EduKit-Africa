@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { 
   Code2, 
   Globe, 
@@ -7,7 +7,13 @@ import {
   Brain, 
   Smartphone,
   Server,
-  Shield
+  Shield,
+  Database,
+  Gamepad2,
+  Palette,
+  Wifi,
+  Atom,
+  GitBranch
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -16,49 +22,71 @@ const categories = [
     name: 'Computer Science',
     description: 'Fundamentals, algorithms, and data structures',
     icon: Code2,
-    color: 'text-primary',
   },
   {
     name: 'Web Development',
     description: 'Frontend, backend, and full-stack development',
     icon: Globe,
-    color: 'text-primary',
   },
   {
     name: 'Cloud Computing',
     description: 'AWS, Azure, GCP, and cloud-native technologies',
     icon: Cloud,
-    color: 'text-primary',
   },
   {
     name: 'Blockchain & Web3',
     description: 'Smart contracts, DeFi, and decentralized apps',
     icon: Blocks,
-    color: 'text-primary',
   },
   {
     name: 'AI/ML & Data Science',
     description: 'Machine learning, deep learning, and data analysis',
     icon: Brain,
-    color: 'text-primary',
   },
   {
     name: 'Mobile Development',
     description: 'iOS, Android, and cross-platform development',
     icon: Smartphone,
-    color: 'text-primary',
   },
   {
     name: 'DevOps',
     description: 'CI/CD, automation, and infrastructure',
     icon: Server,
-    color: 'text-primary',
   },
   {
     name: 'Cybersecurity',
     description: 'Security practices and ethical hacking',
     icon: Shield,
-    color: 'text-primary',
+  },
+  {
+    name: 'Data Engineering',
+    description: 'Data pipelines, ETL, and big data tools',
+    icon: Database,
+  },
+  {
+    name: 'Game Development',
+    description: 'Unity, Unreal, and game design patterns',
+    icon: Gamepad2,
+  },
+  {
+    name: 'UI/UX Design',
+    description: 'User research, prototyping, and design systems',
+    icon: Palette,
+  },
+  {
+    name: 'Internet of Things',
+    description: 'Embedded systems, sensors, and IoT platforms',
+    icon: Wifi,
+  },
+  {
+    name: 'Quantum Computing',
+    description: 'Quantum algorithms and quantum programming',
+    icon: Atom,
+  },
+  {
+    name: 'Open Source',
+    description: 'Contributing to and maintaining open source projects',
+    icon: GitBranch,
   },
 ];
 
