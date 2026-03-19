@@ -15,7 +15,7 @@ We release patches for security vulnerabilities. Currently supported versions:
 
 If you discover a security vulnerability, please send an email to:
 
-📧 **security@edukit-africa.com**
+📧 **ngondimarklewis@gmail.com**
 
 ### What to Include
 
@@ -125,7 +125,7 @@ We appreciate security researchers who help keep EduKit Africa safe. Security co
 
 For security-related questions or concerns:
 
-- 📧 Email: security@edukit-africa.com
+- 📧 Email: ngondimarklewis@gmail.com
 - 💬 Private Security Issue: Use GitHub's private vulnerability reporting
 
 ---
