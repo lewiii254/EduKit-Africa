@@ -4,6 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { BookOpen, LogOut, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Navigation() {
   const { user, signOut } = useAuth();
