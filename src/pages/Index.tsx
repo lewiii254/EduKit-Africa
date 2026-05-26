@@ -2,6 +2,8 @@ import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/Hero';
 import { CategoryGrid } from '@/components/CategoryGrid';
 import { ResourceCard } from '@/components/ResourceCard';
+import { AdSlot } from '@/components/AdSlot';
+import { AffiliatePicks } from '@/components/AffiliatePicks';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
@@ -129,6 +131,12 @@ export default function Index() {
 
       <CategoryGrid />
 
+      <div className="container mx-auto px-4">
+        <AdSlot slot="1234567890" />
+      </div>
+
+      <AffiliatePicks />
+
       {topResources.length > 0 && (
         <section className="py-16 container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
@@ -153,6 +161,10 @@ export default function Index() {
           </div>
         </section>
       )}
+
+      <div className="container mx-auto px-4">
+        <AdSlot slot="2345678901" />
+      </div>
 
       <footer className="border-t border-border bg-muted/30 py-12">
         <div className="container mx-auto px-4">
