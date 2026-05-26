@@ -1,13 +1,14 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { ExternalLink, Star, User, Bookmark, Eye } from 'lucide-react';
+import { ExternalLink, Star, User, Bookmark, Eye, MessageCircle } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { RatingDialog } from './RatingDialog';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { ShareButtons } from './ShareButtons';
+import { Comments } from './Comments';
 
 interface ResourceCardProps {
   resource: {
@@ -31,6 +32,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
   const [ratingsCount, setRatingsCount] = useState<number>(0);
   const [contributorName, setContributorName] = useState<string>('');
   const [showRatingDialog, setShowRatingDialog] = useState(false);
+  const [showComments, setShowComments] = useState(false);
   const bookmarked = isBookmarked(resource.id);
 
   const fetchRatings = useCallback(async () => {
@@ -134,6 +136,8 @@ export function ResourceCard({ resource }: ResourceCardProps) {
                 <ShareButtons resource={resource} />
               </div>
             </div>
+
+            {showComments && <Comments resourceId={resource.id} />}
           </div>
         </CardContent>
 
@@ -143,6 +147,15 @@ export function ResourceCard({ resource }: ResourceCardProps) {
               View Resource
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setShowComments((s) => !s)}
+            title={showComments ? 'Hide discussion' : 'Show discussion'}
+            aria-label="Toggle discussion"
+          >
+            <MessageCircle className="h-4 w-4" />
           </Button>
           {user && (
             <>
