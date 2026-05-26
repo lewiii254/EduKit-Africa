@@ -4,6 +4,7 @@ import { Navigation } from '@/components/Navigation';
 import { SearchAndFilter, CATEGORIES, DIFFICULTIES } from '@/components/SearchAndFilter';
 import { ResourceCard } from '@/components/ResourceCard';
 import { AdSlot } from '@/components/AdSlot';
+import { Fragment } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
@@ -152,14 +153,14 @@ export default function Tracks() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {paginatedResources.map((resource, idx) => (
-                <>
-                  <ResourceCard key={resource.id} resource={resource} />
+                <Fragment key={resource.id}>
+                  <ResourceCard resource={resource} />
                   {idx === 5 && (
-                    <div key="ad-mid" className="md:col-span-2 lg:col-span-3">
+                    <div className="md:col-span-2 lg:col-span-3">
                       <AdSlot slot="3456789012" />
                     </div>
                   )}
-                </>
+                </Fragment>
               ))}
             </div>
             
